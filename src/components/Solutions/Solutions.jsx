@@ -6,14 +6,14 @@ const solutions = [
     number: '01',
     title: 'Healthy Soil',
     text: 'Supporting better nutrient management and stronger soil foundations for productive fields.',
-    image: '/coursel-main.jpg',
+    image: '/coursel-2.jpg',
     tag: 'Foundation',
   },
   {
     number: '02',
     title: 'Stronger Crops',
     text: 'Agricultural inputs designed to support healthy crop growth throughout the growing cycle.',
-    image: '/coursel-2.jpg',
+    image: '/coursel-main.jpg',
     tag: 'Growth',
   },
   {
@@ -27,7 +27,7 @@ const solutions = [
     number: '04',
     title: 'Better Yields',
     text: 'Reliable solutions focused on helping farmers improve productivity and consistency.',
-    image: '/main.jpg',
+    image: '/coursel-4.jpg',
     tag: 'Outcome',
   },
 ]
