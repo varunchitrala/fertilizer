@@ -119,7 +119,7 @@ function Hero() {
         </div>
 
         <div className="hero-bottom">
-          <div className="hero-progress">
+          <div className="hero-progress" aria-label={`Slide ${activeSlide + 1} of ${slides.length}`}>
             <span className="hero-progress-current">0{activeSlide + 1}</span>
             <div className="hero-progress-track">
               <span key={activeSlide} className="hero-progress-bar" />
@@ -127,7 +127,12 @@ function Hero() {
             <span className="hero-progress-total">0{slides.length}</span>
           </div>
 
-          <div className="hero-controls">
+          <a className="hero-scroll-cue" href="#solutions" aria-label="Scroll to solutions">
+            <span className="hero-scroll-line" />
+            <span>Scroll to explore</span>
+          </a>
+
+          <div className="hero-controls" aria-label="Hero carousel controls">
             <button
               type="button"
               className="hero-control"
