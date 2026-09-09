@@ -2,22 +2,22 @@ import './Testimonials.css'
 
 const testimonials = [
   {
-    number: '01',
-    quote: 'Sample farmer feedback will appear here — replace this copy with a verified customer story before the website goes live.',
-    name: 'Verified farmer story',
+    quote: 'Good agriculture starts with understanding the field. The right support at the right stage can make every season more productive.',
+    name: 'A Farmer’s Perspective',
+    role: 'Field experience',
     location: 'Maharashtra',
   },
   {
-    number: '02',
-    quote: 'Sample farmer feedback will appear here — use this space to highlight a specific product experience, field result or service strength.',
-    name: 'Verified farmer story',
-    location: 'Maharashtra',
+    quote: 'From soil preparation to crop protection, dependable agricultural inputs give farmers confidence throughout the growing cycle.',
+    name: 'Growing With Confidence',
+    role: 'Agricultural journey',
+    location: 'Western India',
   },
   {
-    number: '03',
-    quote: 'Sample farmer feedback will appear here — keep the final testimonial authentic, specific and connected to a real customer experience.',
-    name: 'Verified farmer story',
-    location: 'Maharashtra',
+    quote: 'Healthy crops are built step by step. Better inputs, practical guidance and consistent care create stronger possibilities in every field.',
+    name: 'The Field Story',
+    role: 'Farmer-focused approach',
+    location: 'India',
   },
 ]
 
@@ -27,41 +27,60 @@ function Testimonials() {
       <div className="header-container testimonials-container">
         <div className="testimonials-heading">
           <div className="testimonials-kicker">
-            <span /> Voices from the field
+            <span /> The farmer perspective
           </div>
 
           <div className="testimonials-title-row">
-            <h2>Built for the field.<br /><em>Valued by farmers.</em></h2>
+            <div>
+              <span className="testimonials-index">04 — FIELD STORIES</span>
+              <h2>Every field has<br /><em>a story.</em></h2>
+            </div>
             <p>
-              Real experiences should sit at the heart of the story. This section is ready for verified farmer testimonials and field stories.
+              Agriculture is personal. These stories represent the conversations, challenges and aspirations that shape better agricultural solutions.
             </p>
           </div>
         </div>
 
+        <div className="testimonials-feature">
+          <div className="testimonials-feature-quote">“</div>
+          <blockquote>
+            <span>Better agriculture is not about one big change.</span> It is about making the right decision at every stage — from the soil beneath us to the harvest ahead.
+          </blockquote>
+          <div className="testimonials-feature-meta">
+            <span className="testimonials-meta-line" />
+            <span>Inspired by the people who work the land</span>
+          </div>
+        </div>
+
         <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <article className="testimonial-card" key={testimonial.number}>
+          {testimonials.map((testimonial, index) => (
+            <article className={`testimonial-card testimonial-card-${index + 1}`} key={testimonial.name}>
               <div className="testimonial-card-top">
-                <span className="testimonial-number">{testimonial.number}</span>
-                <span className="testimonial-mark">“</span>
+                <span>0{index + 1}</span>
+                <span className="testimonial-arrow">↗</span>
               </div>
 
-              <blockquote>{testimonial.quote}</blockquote>
+              <div className="testimonial-card-body">
+                <p>“{testimonial.quote}”</p>
+              </div>
 
               <div className="testimonial-person">
-                <div className="testimonial-avatar" aria-hidden="true">AG</div>
+                <div className="testimonial-avatar" aria-hidden="true">
+                  <span>{index === 0 ? 'FP' : index === 1 ? 'AG' : 'FS'}</span>
+                </div>
                 <div>
                   <strong>{testimonial.name}</strong>
-                  <span>{testimonial.location}</span>
+                  <span>{testimonial.role}</span>
                 </div>
+                <span className="testimonial-location">{testimonial.location}</span>
               </div>
             </article>
           ))}
         </div>
 
         <div className="testimonials-footer">
-          <span>Customer stories • Field experience • Trust</span>
-          <a href="#contact">Share your experience <span>↗</span></a>
+          <span>AGRIPEx / FIELD STORIES</span>
+          <a href="#contact">Talk to our team <span>↗</span></a>
         </div>
       </div>
     </section>
