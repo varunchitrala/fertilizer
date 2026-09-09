@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Testimonials.css'
+import ScrollReveal from '../ScrollReveal'
 
 const stories = [
   {
@@ -25,7 +26,6 @@ const stories = [
 function Testimonials() {
   const [active, setActive] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-  const sectionRef = useRef(null)
 
   useEffect(() => {
     if (isPaused) return undefined
@@ -43,12 +43,11 @@ function Testimonials() {
     <section
       className="testimonials"
       id="testimonials"
-      ref={sectionRef}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="header-container testimonials-container">
-        <div className="testimonials-intro">
+        <ScrollReveal className="testimonials-intro" distance="left">
           <div>
             <span className="testimonials-eyebrow"><i /> Voices from the field</span>
             <span className="testimonials-number">04 / 05</span>
@@ -57,9 +56,9 @@ function Testimonials() {
           <p>
             Every season brings different soil, weather and crop challenges. Our approach starts by understanding what happens in the field.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="story-stage">
+        <ScrollReveal className="story-stage" delay={150} distance="up">
           <div className="story-image-wrap">
             {stories.map((story, index) => (
               <div
@@ -85,9 +84,9 @@ function Testimonials() {
               <span className="story-place">{stories[active].place}</span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className="story-controls" aria-label="Field story navigation">
+        <ScrollReveal className="story-controls" delay={250} distance="right">
           <div className="story-progress">
             {stories.map((story, index) => (
               <button
@@ -104,12 +103,12 @@ function Testimonials() {
           </div>
           <div className="story-counter">0{active + 1} <span>/ 03</span></div>
           <div className="story-hint">Hover to pause</div>
-        </div>
+        </ScrollReveal>
 
-        <div className="testimonials-note">
+        <ScrollReveal className="testimonials-note" delay={350} distance="up">
           <span>ABOUT THESE STORIES</span>
           <p>Representative perspectives are used here until verified customer testimonials are available.</p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   )
