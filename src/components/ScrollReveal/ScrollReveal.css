@@ -1,15 +1,18 @@
 .scroll-reveal {
   opacity: 0;
-  filter: blur(2px);
-  transition: opacity 700ms cubic-bezier(.22,1,.36,1), transform 750ms cubic-bezier(.22,1,.36,1), filter 750ms cubic-bezier(.22,1,.36,1);
+  filter: blur(3px);
+  transition:
+    opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1300ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1300ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform, filter;
 }
 
-.scroll-reveal-up { transform: translate3d(0, 24px, 0); }
-.scroll-reveal-down { transform: translate3d(0, -24px, 0); }
-.scroll-reveal-left { transform: translate3d(24px, 0, 0); }
-.scroll-reveal-right { transform: translate3d(-24px, 0, 0); }
+.scroll-reveal-up { transform: translate3d(0, 40px, 0); }
+.scroll-reveal-down { transform: translate3d(0, -40px, 0); }
+.scroll-reveal-left { transform: translate3d(40px, 0, 0); }
+.scroll-reveal-right { transform: translate3d(-40px, 0, 0); }
 
 .scroll-reveal.is-visible {
   opacity: 1;
