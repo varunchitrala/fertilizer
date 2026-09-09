@@ -31,7 +31,7 @@ function Footer() {
         <div className="footer-main">
           <ScrollReveal className="footer-brand" delay={100} distance="left">
             <div className="footer-logo-box">
-              <img src="/agri%20logo.png" alt="Agripex logo" />
+              <img src="/main.jpg" alt="Agripex logo" />
             </div>
             <p>Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd.</p>
             <span>Supporting Indian agriculture since 1995.</span>
