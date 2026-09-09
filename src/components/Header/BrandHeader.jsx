@@ -5,7 +5,7 @@ function BrandHeader({ language, setLanguage }) {
     <div className="brand-header">
       <div className="header-container brand-header-inner">
         <a href="#" className="brand-logo" aria-label="Agripex home">
-          <img src="/agri%20logo.png" alt="Agripex logo" />
+          <img src="/main.jpg" alt="Agripex logo" />
         </a>
 
         <div className="brand-copy">

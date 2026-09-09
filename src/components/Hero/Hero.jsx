@@ -3,7 +3,7 @@ import './Hero.css'
 
 const slides = [
   {
-    image: '/coursel-1.jpg',
+    image: '/coursel-main.jpg',
     eyebrow: 'Agripex • Since 1995',
     title: 'Growing Better.',
     highlight: 'Growing Together.',
