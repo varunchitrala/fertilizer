@@ -4,22 +4,20 @@ function BrandHeader({ language, setLanguage }) {
   return (
     <div className="brand-header">
       <div className="header-container brand-header-inner">
-        <a href="#" className="brand-logo" aria-label="Agriculture home">
-          <span className="brand-symbol" aria-hidden="true"><img src="/public/agri logo.png" alt="Agriculture logo" /></span>
-          <span className="brand-logo-text">AGRIFERT</span>
+        <a href="#" className="brand-logo" aria-label="Agripex home">
+          <span className="brand-symbol">
+            <img src="/agri-logo.png" alt="Agripex logo" />
+          </span>
         </a>
 
         <div className="brand-copy">
-          <h1>Krushi Fertilizers & Agro Industries</h1>
-          <p>कृषी फर्टिलायझर्स अँड अॅग्रो इंडस्ट्रीज</p>
-          <span>Quality inputs for a stronger, greener tomorrow</span>
+          <h1>Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd.</h1>
+          <p>अ‍ॅग्रीपेक्स पेस्टिसाइड फर्टिलायझर अँड केमिकल प्रा. लि.</p>
+          <span>Quality agricultural solutions for better growth and a greener tomorrow</span>
         </div>
 
         <div className="brand-actions">
           <LanguageSwitcher language={language} setLanguage={setLanguage} />
-          <div className="partner-mark" aria-label="Partner logo placeholder">
-            <span>AG</span>
-          </div>
         </div>
       </div>
     </div>
