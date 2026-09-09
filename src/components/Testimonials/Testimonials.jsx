@@ -3,13 +3,13 @@ import './Testimonials.css'
 
 const stories = [
   {
-    image: '/coursel-3.jpg',
+    image: '/farmer-1.jpg',
     quote: 'The best agricultural support is simple, timely and practical. Farmers need solutions that make sense in the field, not just on paper.',
     tag: 'FIELD EXPERIENCE',
     place: 'Maharashtra',
   },
   {
-    image: '/coursel-2.jpg',
+    image: '/farmer-2.jpg',
     quote: 'A healthy crop is built throughout the season. Good inputs matter, but consistency and the right decision at each stage matter just as much.',
     tag: 'CROP JOURNEY',
     place: 'Western India',
@@ -32,7 +32,7 @@ function Testimonials() {
 
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % stories.length)
-    }, 6500)
+    }, 3500)
 
     return () => window.clearInterval(timer)
   }, [isPaused])
