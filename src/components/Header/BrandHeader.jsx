@@ -5,7 +5,7 @@ function BrandHeader({ language, setLanguage }) {
     <div className="brand-header">
       <div className="header-container brand-header-inner">
         <a href="#" className="brand-logo" aria-label="Agriculture home">
-          <span className="brand-symbol" aria-hidden="true">🌿</span>
+          <span className="brand-symbol" aria-hidden="true"><img src="/public/agri logo.png" alt="Agriculture logo" /></span>
           <span className="brand-logo-text">AGRIFERT</span>
         </a>
 
