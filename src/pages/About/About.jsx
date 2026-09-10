@@ -1,3 +1,5 @@
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import "./About.css";
 import AboutHero from "./components/AboutHero/AboutHero";
 import AboutStory from "./components/AboutStory/AboutStory";
@@ -8,16 +10,20 @@ import AboutClosing from "./components/AboutClosing/AboutClosing";
 
 function About() {
   return (
-    <div className="about-page">
-      <main>
-        <AboutHero />
-        <AboutStory />
-        <AboutPrinciples />
-        <AboutSolutions />
-        <AboutMission />
-        <AboutClosing />
-      </main>
-    </div>
+    <>
+      <Header />
+      <div className="about-page">
+        <main>
+          <AboutHero />
+          <AboutStory />
+          <AboutPrinciples />
+          <AboutSolutions />
+          <AboutMission />
+          <AboutClosing />
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 }
 
