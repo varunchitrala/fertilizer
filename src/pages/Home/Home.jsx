@@ -1,8 +1,8 @@
 import Header from '../../components/Header/Header'
-import Hero from '../../components/Hero/Hero'
-import Solutions from '../../components/Solutions/Solutions'
-import Testimonials from '../../components/Testimonials/Testimonials'
 import Footer from '../../components/Footer/Footer'
+import Hero from './components/Hero/Hero'
+import Solutions from './components/Solutions/Solutions'
+import Testimonials from './components/Testimonials/Testimonials'
 
 function Home() {
   return (
