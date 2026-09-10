@@ -1,88 +1,39 @@
+import { Link, useLocation } from "react-router-dom";
+
 const navItems = [
   { label: "Home", mr: "मुख्यपृष्ठ", href: "/" },
   { label: "About", mr: "आमच्याबद्दल", href: "/about" },
+  { label: "Products", mr: "उत्पादने", href: "/products" },
   { label: "Gallery", mr: "गॅलरी", href: "#" },
   { label: "Awards", mr: "पुरस्कार", href: "#" },
   { label: "Contact", mr: "संपर्क", href: "#contact" },
 ];
 
-const productItems = [
-  { label: "Fertilizers", mr: "खते", href: "/products" },
-  { label: "Bio Fertilizers", mr: "जैविक खते", href: "/products" },
-  { label: "Plant Nutrition", mr: "वनस्पती पोषण", href: "/products" },
-];
-
-function Navbar({
-  language,
-  productsOpen,
-  setProductsOpen,
-  mobileOpen,
-  setMobileOpen,
-}) {
-  const getLabel = (item) => (language === "mr" ? item.mr : item.label);
-
-  const goToProducts = () => {
-    setProductsOpen(false);
-    setMobileOpen(false);
-    window.location.href = "/products";
-  };
+function Navbar({ mobileOpen, setMobileOpen }) {
+  const location = useLocation();
+  const getLabel = (item) => (location.pathname === "/products" && item.label === "Products" ? "Products" : item.label);
 
   return (
     <div className="navigation-bar">
       <div className="header-container navigation-inner">
-        <div className="nav-links">
-          {navItems.slice(0, 2).map((item) => (
-            <a className="nav-link" href={item.href} key={item.label}>
-              {getLabel(item)}
-            </a>
+        <nav className="nav-links" aria-label="Primary navigation">
+          {navItems.map((item) => (
+            item.href.startsWith("/") ? (
+              <Link
+                className={`nav-link${location.pathname === item.href ? " active" : ""}`}
+                to={item.href}
+                key={item.label}
+                onClick={() => setMobileOpen(false)}
+              >
+                {getLabel(item)}
+              </Link>
+            ) : (
+              <a className="nav-link" href={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
+                {item.label === "Contact" ? "Contact" : getLabel(item)}
+              </a>
+            )
           ))}
-
-          <div className={`products-wrapper ${productsOpen ? "open" : ""}`}>
-            <button
-              className="products-trigger"
-              type="button"
-              aria-expanded={productsOpen}
-              onClick={() => setProductsOpen((current) => !current)}
-            >
-              {language === "mr" ? "उत्पादने" : "Products"}
-              <span aria-hidden="true">⌄</span>
-            </button>
-
-            {productsOpen && (
-              <div className="products-menu">
-                <button
-                  type="button"
-                  className="products-menu-title"
-                  onClick={goToProducts}
-                >
-                  {language === "mr" ? "सर्व उत्पादने" : "All Products"}
-                  <span aria-hidden="true">→</span>
-                </button>
-
-                {productItems.map((item) => (
-                  <a
-                    href={item.href}
-                    key={item.label}
-                    onClick={() => setProductsOpen(false)}
-                  >
-                    <span>{getLabel(item)}</span>
-                    <span aria-hidden="true">›</span>
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {navItems.slice(2).map((item) => (
-            <a className="nav-link" href={item.href} key={item.label}>
-              {getLabel(item)}
-            </a>
-          ))}
-
-          <a className="nav-link products-page-link" href="/products">
-            {language === "mr" ? "सर्व उत्पादने" : "Product Page"}
-          </a>
-        </div>
+        </nav>
 
         <button
           className="mobile-menu-toggle"
@@ -97,56 +48,23 @@ function Navbar({
         </button>
 
         {mobileOpen && (
-          <div className="mobile-navigation">
-            {navItems.slice(0, 2).map((item) => (
-              <a
-                href={item.href}
-                key={item.label}
-                onClick={() => setMobileOpen(false)}
-              >
-                {getLabel(item)}
-              </a>
-            ))}
-
-            <button
-              type="button"
-              onClick={() => setProductsOpen((current) => !current)}
-            >
-              {language === "mr" ? "उत्पादने" : "Products"}
-              <span aria-hidden="true">{productsOpen ? "⌃" : "⌄"}</span>
-            </button>
-
-            {productsOpen && (
-              <div className="mobile-products">
-                <a href="/products" onClick={() => setMobileOpen(false)}>
-                  {language === "mr" ? "सर्व उत्पादने" : "All Products"}
+          <nav className="mobile-navigation" aria-label="Mobile navigation">
+            {navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  to={item.href}
+                  key={item.label}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {getLabel(item)}
+                </Link>
+              ) : (
+                <a href={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
+                  {getLabel(item)}
                 </a>
-                {productItems.map((item) => (
-                  <a
-                    href={item.href}
-                    key={item.label}
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {getLabel(item)}
-                  </a>
-                ))}
-              </div>
+              )
             )}
-
-            <a href="/products" onClick={() => setMobileOpen(false)}>
-              {language === "mr" ? "सर्व उत्पादने" : "Product Page"}
-            </a>
-
-            {navItems.slice(2).map((item) => (
-              <a
-                href={item.href}
-                key={item.label}
-                onClick={() => setMobileOpen(false)}
-              >
-                {getLabel(item)}
-              </a>
-            ))}
-          </div>
+          </nav>
         )}
       </div>
     </div>
