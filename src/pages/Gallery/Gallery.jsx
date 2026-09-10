@@ -1,42 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/ScrollReveal";
 import "./Gallery.css";
 
 const galleryItems = [
-  {
-    image: "/farmer-1.jpg",
-    label: "Field Stories",
-    title: "Growing with purpose",
-  },
-  {
-    image: "/coursel-2.jpg",
-    label: "Crop Care",
-    title: "Precision in every application",
-  },
-  {
-    image: "/coursel-main.jpg",
-    label: "Agriculture",
-    title: "From soil to harvest",
-  },
-  {
-    image: "/coursel-3.jpg",
-    label: "Innovation",
-    title: "Better inputs. Better outcomes.",
-  },
-  {
-    image: "/farmer-2.jpg",
-    label: "Field Work",
-    title: "Supporting modern farming",
-  },
-  {
-    image: "/coursel-4.jpg",
-    label: "Our Impact",
-    title: "Built for the field",
-  },
+  { image: "/farmer-1.jpg", category: "Field Stories", title: "Growing with purpose", featured: true },
+  { image: "/coursel-2.jpg", category: "Crop Care", title: "Precision in every application" },
+  { image: "/coursel-main.jpg", category: "Agriculture", title: "From soil to harvest" },
+  { image: "/coursel-3.jpg", category: "Innovation", title: "Better inputs. Better outcomes." },
+  { image: "/farmer-2.jpg", category: "Field Work", title: "Supporting modern farming" },
+  { image: "/coursel-4.jpg", category: "Our Impact", title: "Built for the field" },
 ];
 
+const filters = ["All", "Field Stories", "Crop Care", "Agriculture", "Innovation", "Field Work", "Our Impact"];
+
 function Gallery() {
+  const [activeFilter, setActiveFilter] = useState("All");
   const [activeImage, setActiveImage] = useState(null);
+
+  const visibleItems = useMemo(
+    () => activeFilter === "All" ? galleryItems : galleryItems.filter((item) => item.category === activeFilter),
+    [activeFilter]
+  );
 
   useEffect(() => {
     if (!activeImage) return undefined;
@@ -44,95 +29,128 @@ function Gallery() {
     document.body.style.overflow = "hidden";
     const handleKeyDown = (event) => {
       if (event.key === "Escape") setActiveImage(null);
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        setActiveImage((current) => {
+          if (!current) return current;
+          const direction = event.key === "ArrowRight" ? 1 : -1;
+          const currentIndex = visibleItems.findIndex((item) => item.image === current.image);
+          const nextIndex = (currentIndex + direction + visibleItems.length) % visibleItems.length;
+          return { ...visibleItems[nextIndex], index: nextIndex };
+        });
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeImage]);
+  }, [activeImage, visibleItems]);
 
   return (
-    <section className="gallery-section" aria-labelledby="gallery-title">
-      <div className="container">
+    <section className="gallery-page-section" aria-labelledby="gallery-page-title">
+      <div className="gallery-page-orb gallery-page-orb-one" />
+      <div className="gallery-page-orb gallery-page-orb-two" />
+
+      <div className="gallery-page-container">
         <ScrollReveal>
-          <div className="gallery-heading">
-            <div className="gallery-heading-left">
-              <span className="gallery-index">03</span>
+          <header className="gallery-page-hero">
+            <div className="gallery-page-hero-kicker">
+              <span>03</span>
+              <span>AGRIPEx / Visual Archive</span>
+            </div>
+            <div className="gallery-page-hero-grid">
               <div>
-                <span className="gallery-eyebrow">Field stories</span>
-                <h2 id="gallery-title">Life in the field.</h2>
+                <p className="gallery-page-overline">FIELD STORIES · CROP CARE · INNOVATION</p>
+                <h1 id="gallery-page-title">Closer to the field.<br /><em>Closer to the future.</em></h1>
+              </div>
+              <div className="gallery-page-hero-copy">
+                <p>Explore the people, crops, practices and ideas shaping a more productive agricultural future.</p>
+                <div className="gallery-page-hero-rule" />
+                <span>Scroll to explore <b>↓</b></span>
               </div>
             </div>
-            <p className="gallery-intro">
-              A visual look at agriculture, innovation and the people behind
-              better crop outcomes.
-            </p>
+          </header>
+        </ScrollReveal>
+
+        <ScrollReveal distance={28} delay={80}>
+          <div className="gallery-page-toolbar" aria-label="Gallery filters">
+            <span className="gallery-page-toolbar-label">Explore archive</span>
+            <div className="gallery-filter-list">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  className={activeFilter === filter ? "is-active" : ""}
+                  onClick={() => setActiveFilter(filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+            <span className="gallery-page-count">{String(visibleItems.length).padStart(2, "0")} visuals</span>
           </div>
         </ScrollReveal>
 
-        <div className="gallery-grid">
-          {galleryItems.map((item, index) => (
-            <ScrollReveal
-              key={item.image}
-              distance={45}
-              delay={(index % 3) * 80}
-            >
+        <div className={`gallery-page-grid ${visibleItems.length === 1 ? "single-item" : ""}`}>
+          {visibleItems.map((item, index) => (
+            <ScrollReveal key={item.image} distance={55} delay={(index % 4) * 70}>
               <button
-                className={`gallery-item gallery-item-${index + 1}`}
                 type="button"
+                className={`gallery-page-card ${item.featured ? "is-featured" : ""}`}
                 onClick={() => setActiveImage({ ...item, index })}
               >
-                <span className="gallery-image-wrap">
-                  <img src={item.image} alt={item.title} loading="lazy" />
-                  <span className="gallery-overlay" />
-                </span>
-                <span className="gallery-meta">
-                  <span>
+                <span className="gallery-page-card-image">
+                  <img src={item.image} alt={item.title} loading={index > 1 ? "lazy" : "eager"} />
+                  <span className="gallery-page-card-wash" />
+                  <span className="gallery-page-card-corner">↗</span>
+                  <span className="gallery-page-card-meta">
                     <small>{String(index + 1).padStart(2, "0")}</small>
-                    {item.label}
+                    <span>{item.category}</span>
                   </span>
-                  <span className="gallery-arrow">↗</span>
                 </span>
-                <span className="gallery-title">{item.title}</span>
+                <span className="gallery-page-card-caption">
+                  <small>{item.category}</small>
+                  <strong>{item.title}</strong>
+                  <span>View image <b>↗</b></span>
+                </span>
               </button>
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal distance={40}>
+          <section className="gallery-page-cta" aria-label="Explore products">
+            <div>
+              <span>From the field to the formulation</span>
+              <h2>See what powers<br /><em>better crop outcomes.</em></h2>
+            </div>
+            <Link to="/products" className="gallery-page-cta-link">
+              <span>Explore products</span>
+              <b>↗</b>
+            </Link>
+          </section>
+        </ScrollReveal>
       </div>
 
       {activeImage ? (
-        <div
-          className="gallery-lightbox"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${activeImage.title} image viewer`}
-        >
-          <button
-            className="gallery-lightbox-backdrop"
-            type="button"
-            aria-label="Close gallery"
-            onClick={() => setActiveImage(null)}
-          />
-          <div className="gallery-lightbox-panel">
-            <button
-              className="gallery-lightbox-close"
-              type="button"
-              aria-label="Close gallery"
-              onClick={() => setActiveImage(null)}
-            >
-              ×
+        <div className="gallery-page-lightbox" role="dialog" aria-modal="true" aria-label={`${activeImage.title} image viewer`}>
+          <button className="gallery-page-lightbox-backdrop" type="button" aria-label="Close image viewer" onClick={() => setActiveImage(null)} />
+          <div className="gallery-page-lightbox-panel">
+            <button className="gallery-page-lightbox-close" type="button" aria-label="Close image viewer" onClick={() => setActiveImage(null)}>
+              <span />
+              <span />
             </button>
+            <div className="gallery-page-lightbox-topline">
+              <span>AGRIPEx / Visual Archive</span>
+              <span>{String(activeImage.index + 1).padStart(2, "0")} / {visibleItems.length.toString().padStart(2, "0")}</span>
+            </div>
             <img src={activeImage.image} alt={activeImage.title} />
-            <div className="gallery-lightbox-caption">
-              <span>
-                {String(activeImage.index + 1).padStart(2, "0")} /{" "}
-                {galleryItems.length}
-              </span>
+            <div className="gallery-page-lightbox-caption">
               <div>
-                <small>{activeImage.label}</small>
-                <strong>{activeImage.title}</strong>
+                <small>{activeImage.category}</small>
+                <h2>{activeImage.title}</h2>
               </div>
+              <div className="gallery-lightbox-hint">Use ← → to browse</div>
             </div>
           </div>
         </div>
