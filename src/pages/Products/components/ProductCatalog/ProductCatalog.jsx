@@ -7,7 +7,7 @@ const products = [
   {
     name: "Calcium Nitrate",
     description: "A calcium and nitrogen fertilizer for supporting healthy crop development and balanced nutrition.",
-    image: "/products/calcium-nitrate.jpg",
+    image: "/a1.jpg",
     details: {
       overview: "Calcium Nitrate fortified with Magnesium is a highly soluble liquid fertilizer providing nitrogen, calcium, and magnesium. It supports healthy vegetative growth, strong cell structure, and improved fruit quality, enhanced by efficient nutrient availability to the plant.",
       features: [
