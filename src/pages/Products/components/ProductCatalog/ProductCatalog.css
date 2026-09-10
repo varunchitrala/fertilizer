@@ -1,5 +1,6 @@
 .products-catalog {
   padding: 110px 0 140px;
+  background: #fbfcf8;
 }
 
 .products-heading {
@@ -7,7 +8,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 46px;
+  margin-bottom: 48px;
   padding-bottom: 18px;
   border-bottom: 1px solid #dce3db;
 }
@@ -15,157 +16,137 @@
 .products-section-number {
   margin-right: 12px;
   color: #bd9342;
-  font:
-    700 11px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.14em;
+  font: 700 11px "DM Sans", Inter, sans-serif;
+  letter-spacing: .14em;
 }
 
 .products-section-label {
   color: #52645a;
-  font:
-    700 11px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.17em;
+  font: 700 11px "DM Sans", Inter, sans-serif;
+  letter-spacing: .17em;
   text-transform: uppercase;
 }
 
 .products-heading p {
   margin: 0;
   color: #829087;
-  font:
-    700 10px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.14em;
+  font: 700 10px "DM Sans", Inter, sans-serif;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  gap: 30px;
 }
 
 .product-card {
+  position: relative;
   overflow: hidden;
   background: #fffefa;
   border: 1px solid #e2e8e1;
-  transition:
-    transform 260ms ease,
-    box-shadow 260ms ease,
-    border-color 260ms ease;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  border-color: #d2ddd0;
-  box-shadow: 0 20px 46px rgba(22, 61, 34, 0.09);
+  transform: translateY(-8px);
+  border-color: #cfdacb;
+  box-shadow: 0 24px 55px rgba(22, 61, 34, .11);
 }
 
 .product-card-image {
   position: relative;
-  aspect-ratio: 1 / 0.82;
+  aspect-ratio: 4 / 4.35;
   overflow: hidden;
-  background: #f0f4ee;
+  background: #eef3ed;
 }
 
-.product-card-image-placeholder {
-  display: grid;
-  place-items: center;
-  isolation: isolate;
-  background: linear-gradient(135deg, #103d22, #1d6a38);
-}
-
-.product-card-image-placeholder::before {
+.product-card-image::before {
   content: "";
   position: absolute;
-  width: 65%;
-  aspect-ratio: 1;
-  border: 1px solid rgba(200, 162, 78, 0.26);
-  border-radius: 50%;
-}
-
-.product-placeholder-ring {
-  position: absolute;
-  width: 48%;
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-}
-
-.product-placeholder-brand {
-  position: relative;
+  inset: 14px;
   z-index: 1;
+  border: 1px solid rgba(255,255,255,.45);
+  pointer-events: none;
+}
+
+.product-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16,61,34,0) 52%, rgba(16,61,34,.32) 100%);
+  pointer-events: none;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.001);
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.055);
+}
+
+.product-card-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: rgba(16,61,34,.72);
+  backdrop-filter: blur(8px);
   color: #fffefa;
-  font:
-    800 clamp(21px, 2.3vw, 31px) "Manrope",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.09em;
-}
-
-.product-placeholder-index {
-  position: absolute;
-  top: 16px;
-  left: 17px;
-  color: #d8b764;
-  font:
-    700 9px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.15em;
-}
-
-.product-card-image-placeholder::after {
-  content: "PRODUCT RANGE";
-  position: absolute;
-  right: 16px;
-  bottom: 13px;
-  color: rgba(255, 255, 255, 0.65);
-  font:
-    700 8px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.16em;
+  font: 700 9px "DM Sans", Inter, sans-serif;
+  letter-spacing: .12em;
 }
 
 .product-card-content {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 17px;
-  padding: 25px 24px 29px;
+  position: relative;
+  padding: 25px 25px 29px;
 }
 
-.product-card-index {
-  padding-top: 5px;
-  color: #bf9648;
-  font:
-    700 10px "DM Sans",
-    Inter,
-    sans-serif;
-  letter-spacing: 0.13em;
+.product-card-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 34px;
+  height: 2px;
+  background: #c8a24e;
+}
+
+.product-card-category {
+  display: block;
+  margin-bottom: 12px;
+  color: #839087;
+  font: 700 9px "DM Sans", Inter, sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
 }
 
 .product-card h2 {
-  margin: 0 0 11px;
+  margin: 0 0 12px;
   color: #193d25;
-  font:
-    750 21px/1.15 "Manrope",
-    Inter,
-    sans-serif;
-  letter-spacing: -0.035em;
+  font: 800 clamp(21px, 2vw, 27px)/1.08 "Manrope", Inter, sans-serif;
+  letter-spacing: -.045em;
 }
 
 .product-card p {
+  min-height: 68px;
   margin: 0;
-  color: #66736b;
-  font:
-    13px/1.75 "DM Sans",
-    Inter,
-    sans-serif;
+  color: #68756d;
+  font: 13px/1.75 "DM Sans", Inter, sans-serif;
 }
 
 @media (max-width: 960px) {
@@ -186,10 +167,18 @@
 
   .products-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
   }
 
   .product-card-content {
-    padding: 22px 20px 25px;
+    padding: 23px 20px 27px;
+  }
+
+  .product-card-content::before {
+    left: 20px;
+  }
+
+  .product-card p {
+    min-height: 0;
   }
 }
