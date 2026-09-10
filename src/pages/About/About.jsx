@@ -5,25 +5,56 @@ function About() {
   return (
     <div className="about-page">
       <main>
-        <section className="about-hero">
-          <div className="about-hero-image">
-            <img src="/farmer-1.jpg" alt="Agricultural field" />
-          </div>
-          <div className="about-hero-overlay" />
-          <div className="header-container about-hero-content">
-            <ScrollReveal distance="up">
-              <span className="about-eyebrow"><i /> About Agripex</span>
-              <h1>Growing with<br /><em>agriculture.</em></h1>
-              <p>Reliable agricultural inputs for healthier crops, stronger productivity and more sustainable farming.</p>
-            </ScrollReveal>
-            <div className="about-hero-meta">
-              <span>AGRIPEX / COMPANY PROFILE</span>
-              <span>01 / 05</span>
+        <section className="about-hero about-hero-modern">
+          <div className="about-hero-modern-bg" aria-hidden="true" />
+          <div className="header-container about-hero-modern-grid">
+            <div className="about-hero-modern-copy">
+              <ScrollReveal distance="up">
+                <div className="about-hero-modern-label">
+                  <span className="about-hero-modern-line" />
+                  <span>About Agripex</span>
+                  <span className="about-hero-modern-number">01</span>
+                </div>
+
+                <h1>
+                  Built for
+                  <br />
+                  <em>better agriculture.</em>
+                </h1>
+
+                <p>
+                  Reliable agricultural inputs and practical solutions designed around healthier crops, stronger productivity and sustainable farming.
+                </p>
+
+                <a className="about-hero-modern-link" href="#about-story">
+                  <span>Discover our story</span>
+                  <i aria-hidden="true">↘</i>
+                </a>
+              </ScrollReveal>
             </div>
+
+            <ScrollReveal className="about-hero-modern-visual" delay={140} distance="right">
+              <div className="about-hero-modern-image-wrap">
+                <img src="/farmer-1.jpg" alt="Farmer working in an agricultural field" />
+                <div className="about-hero-modern-image-tag">
+                  <span>AGRIPEX</span>
+                  <span>FIELD / INDIA</span>
+                </div>
+              </div>
+              <div className="about-hero-modern-orbit" aria-hidden="true">
+                <span>AGRICULTURE • QUALITY • TRUST • INNOVATION • </span>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <div className="about-hero-modern-footer header-container">
+            <span>AGRIPEX PESTICIDE FERTILIZER &amp; CHEMICAL PVT. LTD.</span>
+            <span>COMPANY PROFILE</span>
+            <span>2026</span>
           </div>
         </section>
 
-        <section className="about-story">
+        <section className="about-story" id="about-story">
           <div className="header-container about-story-grid">
             <ScrollReveal className="about-section-label" distance="left">
               <span>01</span>
