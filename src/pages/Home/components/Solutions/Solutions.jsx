@@ -1,5 +1,5 @@
 import './Solutions.css'
-import '../../../../components/ScrollReveal'
+import ScrollReveal from '../../../../components/ScrollReveal'
 
 const solutions = [
   { number: '01', title: 'Healthy Soil', text: 'Supporting better nutrient management and stronger soil foundations for productive fields.', image: '/coursel-2.jpg', tag: 'Foundation' },
