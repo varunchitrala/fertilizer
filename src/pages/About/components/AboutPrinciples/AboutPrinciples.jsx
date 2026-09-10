@@ -1,44 +1,46 @@
+import "./AboutPrinciples.css";
 import ScrollReveal from "../../../../components/ScrollReveal";
+
+const principles = [
+  {
+    number: "01",
+    title: "Quality",
+    text: "Premium-grade agricultural inputs selected with effectiveness and safety in mind.",
+  },
+  {
+    number: "02",
+    title: "Reliability",
+    text: "Consistent support for farmers, retailers, and distributors across their agricultural needs.",
+  },
+  {
+    number: "03",
+    title: "Farmer focus",
+    text: "Practical guidance that keeps real crop conditions and farming outcomes at the center.",
+  },
+];
 
 function AboutPrinciples() {
   return (
     <section className="about-principles">
-      <div className="header-container">
-        <ScrollReveal className="about-section-heading" distance="up">
-          <span className="about-eyebrow about-eyebrow-dark">
-            <i /> What guides us
-          </span>
-          <h2>
-            Quality is the starting point.
-            <br />
-            <em>Trust is the outcome.</em>
-          </h2>
+      <div className="container">
+        <ScrollReveal className="about-section-heading" distance={35}>
+          <span className="about-eyebrow about-eyebrow-dark"><i /> Our principles</span>
+          <h2>Quality is the starting point. <em>Trust is the outcome.</em></h2>
         </ScrollReveal>
+
         <div className="about-principles-grid">
-          <ScrollReveal className="about-principle" delay={80} distance="up">
-            <span>01</span>
-            <h3>Quality</h3>
-            <p>
-              Premium-grade agricultural inputs focused on effectiveness, safety
-              and dependable crop performance.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal className="about-principle" delay={180} distance="up">
-            <span>02</span>
-            <h3>Reliability</h3>
-            <p>
-              Consistent products and practical support designed around the
-              needs of farmers and agriculture partners.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal className="about-principle" delay={280} distance="up">
-            <span>03</span>
-            <h3>Farmer focus</h3>
-            <p>
-              Understanding crop needs and helping farmers make better decisions
-              about crop care and nutrition.
-            </p>
-          </ScrollReveal>
+          {principles.map((principle, index) => (
+            <ScrollReveal
+              className="about-principle"
+              distance={30}
+              delay={index * 100}
+              key={principle.number}
+            >
+              <span>{principle.number}</span>
+              <h3>{principle.title}</h3>
+              <p>{principle.text}</p>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
