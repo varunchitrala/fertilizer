@@ -1,0 +1,33 @@
+.about-principles { padding: 120px 0 130px; background: #103d22; color: #fffdf7; }
+
+.about-principles h2 {
+  margin: 0;
+  font: 800 clamp(44px, 5.5vw, 78px)/.96 "Manrope", Inter, sans-serif;
+  letter-spacing: -.065em;
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.about-principle {
+  min-height: 265px;
+  padding: 27px 34px 20px 0;
+  border-right: 1px solid rgba(255,255,255,.14);
+}
+
+.about-principle + .about-principle { padding-left: 34px; }
+.about-principle:last-child { border-right: 0; padding-right: 0; }
+.about-principle span { color: #c8a24e; font: 700 10px "DM Sans", Inter, sans-serif; letter-spacing: .15em; }
+.about-principle h3 { margin: 52px 0 13px; font: 700 28px "Manrope", Inter, sans-serif; letter-spacing: -.03em; }
+.about-principle p { max-width: 300px; margin: 0; color: rgba(255,255,255,.57); font: 14px/1.7 "DM Sans", Inter, sans-serif; }
+
+@media (max-width: 900px) {
+  .about-principles-grid { grid-template-columns: 1fr; }
+  .about-principle { min-height: auto; padding: 30px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+  .about-principle + .about-principle { padding-left: 0; }
+  .about-principle:last-child { border-bottom: 0; }
+  .about-principle h3 { margin-top: 28px; }
+}
