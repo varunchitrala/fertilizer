@@ -1,0 +1,195 @@
+.products-catalog {
+  padding: 110px 0 140px;
+}
+
+.products-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 46px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dce3db;
+}
+
+.products-section-number {
+  margin-right: 12px;
+  color: #bd9342;
+  font:
+    700 11px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.14em;
+}
+
+.products-section-label {
+  color: #52645a;
+  font:
+    700 11px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.products-heading p {
+  margin: 0;
+  color: #829087;
+  font:
+    700 10px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.product-card {
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid #e2e8e1;
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: #d2ddd0;
+  box-shadow: 0 20px 46px rgba(22, 61, 34, 0.09);
+}
+
+.product-card-image {
+  position: relative;
+  aspect-ratio: 1 / 0.82;
+  overflow: hidden;
+  background: #f0f4ee;
+}
+
+.product-card-image-placeholder {
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  background: linear-gradient(135deg, #103d22, #1d6a38);
+}
+
+.product-card-image-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(200, 162, 78, 0.26);
+  border-radius: 50%;
+}
+
+.product-placeholder-ring {
+  position: absolute;
+  width: 48%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.product-placeholder-brand {
+  position: relative;
+  z-index: 1;
+  color: #fffefa;
+  font:
+    800 clamp(21px, 2.3vw, 31px) "Manrope",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.09em;
+}
+
+.product-placeholder-index {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  color: #d8b764;
+  font:
+    700 9px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.product-card-image-placeholder::after {
+  content: "PRODUCT RANGE";
+  position: absolute;
+  right: 16px;
+  bottom: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font:
+    700 8px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.16em;
+}
+
+.product-card-content {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 17px;
+  padding: 25px 24px 29px;
+}
+
+.product-card-index {
+  padding-top: 5px;
+  color: #bf9648;
+  font:
+    700 10px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.13em;
+}
+
+.product-card h2 {
+  margin: 0 0 11px;
+  color: #193d25;
+  font:
+    750 21px/1.15 "Manrope",
+    Inter,
+    sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.product-card p {
+  margin: 0;
+  color: #66736b;
+  font:
+    13px/1.75 "DM Sans",
+    Inter,
+    sans-serif;
+}
+
+@media (max-width: 960px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .products-catalog {
+    padding: 80px 0 100px;
+  }
+
+  .products-heading {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-card-content {
+    padding: 22px 20px 25px;
+  }
+}
