@@ -1,4 +1,4 @@
-import '../../pages/About/About.css'
+import './About.css'
 import AboutHero from '../../components/About/AboutHero/AboutHero'
 import AboutStory from '../../components/About/AboutStory/AboutStory'
 import AboutPrinciples from '../../components/About/AboutPrinciples/AboutPrinciples'
