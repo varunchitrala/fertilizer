@@ -1,7 +1,7 @@
 .site-footer {
   position: relative;
   overflow: hidden;
-  padding: 42px 0 14px;
+  padding: 20px 0 14px;
   background: #103d22;
   color: #fffdf7;
 }
@@ -18,13 +18,13 @@
 }
 .footer-orbit-one {
   width: 340px;
-  height: 340px;
+  height: 100px;
   top: -250px;
   right: -95px;
 }
 .footer-orbit-two {
   width: 180px;
-  height: 180px;
+  height: 100px;
   bottom: -10px;
   left: -135px;
   border-color: rgba(255, 255, 255, 0.045);
