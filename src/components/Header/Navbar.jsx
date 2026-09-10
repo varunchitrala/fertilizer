@@ -7,9 +7,9 @@ const navItems = [
 ];
 
 const productItems = [
-  { label: "Fertilizers", mr: "खते", href: "#" },
-  { label: "Bio Fertilizers", mr: "जैविक खते", href: "#" },
-  { label: "Plant Nutrition", mr: "वनस्पती पोषण", href: "#" },
+  { label: "Fertilizers", mr: "खते", href: "/products" },
+  { label: "Bio Fertilizers", mr: "जैविक खते", href: "/products" },
+  { label: "Plant Nutrition", mr: "वनस्पती पोषण", href: "/products" },
 ];
 
 function Navbar({
@@ -20,6 +20,12 @@ function Navbar({
   setMobileOpen,
 }) {
   const getLabel = (item) => (language === "mr" ? item.mr : item.label);
+
+  const goToProducts = () => {
+    setProductsOpen(false);
+    setMobileOpen(false);
+    window.location.href = "/products";
+  };
 
   return (
     <div className="navigation-bar">
@@ -44,6 +50,15 @@ function Navbar({
 
             {productsOpen && (
               <div className="products-menu">
+                <button
+                  type="button"
+                  className="products-menu-title"
+                  onClick={goToProducts}
+                >
+                  {language === "mr" ? "सर्व उत्पादने" : "All Products"}
+                  <span aria-hidden="true">→</span>
+                </button>
+
                 {productItems.map((item) => (
                   <a
                     href={item.href}
@@ -63,6 +78,10 @@ function Navbar({
               {getLabel(item)}
             </a>
           ))}
+
+          <a className="nav-link products-page-link" href="/products">
+            {language === "mr" ? "सर्व उत्पादने" : "Product Page"}
+          </a>
         </div>
 
         <button
@@ -99,6 +118,9 @@ function Navbar({
 
             {productsOpen && (
               <div className="mobile-products">
+                <a href="/products" onClick={() => setMobileOpen(false)}>
+                  {language === "mr" ? "सर्व उत्पादने" : "All Products"}
+                </a>
                 {productItems.map((item) => (
                   <a
                     href={item.href}
@@ -110,6 +132,10 @@ function Navbar({
                 ))}
               </div>
             )}
+
+            <a href="/products" onClick={() => setMobileOpen(false)}>
+              {language === "mr" ? "सर्व उत्पादने" : "Product Page"}
+            </a>
 
             {navItems.slice(2).map((item) => (
               <a
