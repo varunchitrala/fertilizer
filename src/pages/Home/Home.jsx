@@ -2,9 +2,8 @@ import Header from "../../components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Solutions from "./components/Solutions/Solutions";
 import Testimonials from "./components/Testimonials/Testimonials";
-import Products from "../Products/Products";
 import Footer from "../../components/Footer/Footer";
-import "../Products/Products.css";
+import "./home-products-preview.css";
 
 function Home() {
   return (
@@ -20,8 +19,12 @@ function Home() {
                 <span className="home-products-preview-kicker">Our range</span>
                 <h2 id="home-products-title">Products made for the field.</h2>
               </div>
-              <p>Explore our agricultural products and open the complete product catalogue for technical details, application guidance and specifications.</p>
+              <p>
+                Explore selected products from our agricultural range. Open the
+                catalogue to view complete technical details and product information.
+              </p>
             </div>
+
             <ProductsPreview />
           </div>
         </section>
@@ -50,10 +53,13 @@ function ProductsPreview() {
           <div className="home-product-card-content">
             <span>{product.type}</span>
             <h3>{product.name}</h3>
-            <a href="/products" className="home-product-card-link">View product details <b aria-hidden="true">↗</b></a>
+            <a href="/products" className="home-product-card-link">
+              View product details <b aria-hidden="true">↗</b>
+            </a>
           </div>
         </article>
       ))}
+
       <a className="home-products-catalog-link" href="/products">
         <span>View complete catalogue</span>
         <b aria-hidden="true">↗</b>
