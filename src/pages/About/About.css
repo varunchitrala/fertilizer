@@ -61,25 +61,3 @@
 }
 
 .about-eyebrow-dark { color: #c8a24e; }
-
-@media (max-width: 620px) {
-  .about-hero-modern-copy h1 { font-size: clamp(48px, 14vw, 72px); }
-  .about-hero-modern-copy p { font-size: 15px; }
-  .about-hero-modern-visual { min-height: 420px; }
-  .about-hero-modern-image-wrap { height: 420px; width: 92%; }
-  .about-hero-modern-orbit { right: -2px; width: 118px; height: 118px; }
-  .about-hero-modern-orbit span { width: 82px; font-size: 7px; }
-  .about-hero-modern-footer { grid-template-columns: 1fr auto; gap: 16px; }
-  .about-hero-modern-footer span:first-child { display: none; }
-  .about-story { padding: 85px 0 100px; }
-  .about-story-grid { grid-template-columns: 1fr; gap: 28px; }
-  .about-story-image { grid-column: auto; margin-top: 5px; }
-  .about-story-image img { height: 340px; }
-  .about-section-heading { margin-bottom: 48px; }
-  .about-principles { padding: 85px 0 95px; }
-  .about-solutions { padding: 90px 0; }
-  .about-solutions-image img { height: 400px; }
-  .about-mission { padding: 85px 0; }
-  .about-closing { padding: 90px 0 105px; }
-  .about-closing h2 { font-size: clamp(48px, 14vw, 76px); }
-}
