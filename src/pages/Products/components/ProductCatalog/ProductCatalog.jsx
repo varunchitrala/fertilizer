@@ -104,8 +104,14 @@ function ProductRow({ product, index, onOpen }) {
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <div className="product-row-line" />
-          <button className="product-row-hint" type="button" onClick={() => onOpen(product, index)}>
-            Agricultural solution <b>↗</b>
+          <button
+            className="product-row-hint"
+            type="button"
+            aria-label={`View details for ${product.name}`}
+            onClick={() => onOpen(product, index)}
+          >
+            <span>View product details</span>
+            <b aria-hidden="true">↗</b>
           </button>
         </div>
       </article>
