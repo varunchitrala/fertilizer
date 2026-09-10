@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Testimonials.css'
-import '../../../../components/ScrollReveal'
+import ScrollReveal from '../../../../components/ScrollReveal'
 
 const stories = [
   { image: '/farmer-1.jpg', quote: 'The best agricultural support is simple, timely and practical. Farmers need solutions that make sense in the field, not just on paper.', tag: 'FIELD EXPERIENCE', place: 'Maharashtra' },
