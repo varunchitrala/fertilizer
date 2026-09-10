@@ -1,15 +1,15 @@
 const navItems = [
-  { label: "Home", mr: "मुख्यपृष्ठ", href: "#" },
-  { label: "About", mr: "आमच्याबद्दल", href: "#" },
-  { label: "Gallery", mr: "गॅलरी", href: "#" },
-  { label: "Awards", mr: "पुरस्कार", href: "#" },
-  { label: "Contact", mr: "संपर्क", href: "#" },
+  { label: "Home", mr: "मुख्यपृष्ठ", href: "/" },
+  { label: "About", mr: "आमच्याबद्दल", href: "/about" },
+  { label: "Gallery", mr: "गॅलरी", href: "#gallery" },
+  { label: "Awards", mr: "पुरस्कार", href: "#awards" },
+  { label: "Contact", mr: "संपर्क", href: "#contact" },
 ];
 
 const productItems = [
-  { label: "Fertilizers", mr: "खते", href: "#" },
-  { label: "Bio Fertilizers", mr: "जैविक खते", href: "#" },
-  { label: "Plant Nutrition", mr: "वनस्पती पोषण", href: "#" },
+  { label: "Fertilizers", mr: "खते", href: "#products" },
+  { label: "Bio Fertilizers", mr: "जैविक खते", href: "#products" },
+  { label: "Plant Nutrition", mr: "वनस्पती पोषण", href: "#products" },
 ];
 
 function Navbar({
