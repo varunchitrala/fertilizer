@@ -1,0 +1,30 @@
+.about-closing { padding: 130px 0 150px; background: #fbfcf8; }
+
+.about-closing h2 {
+  margin: 0 0 38px;
+  font: 800 clamp(52px,7vw,100px)/.9 "Manrope", Inter, sans-serif;
+  letter-spacing: -.07em;
+}
+
+.about-closing a {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: #174f2b;
+  font: 700 13px "DM Sans", Inter, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.about-closing a span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #c8a24e;
+  border-radius: 50%;
+  transition: transform 250ms ease, background 250ms ease;
+}
+
+.about-closing a:hover span { transform: translate(3px,-3px); background: #c8a24e; }
