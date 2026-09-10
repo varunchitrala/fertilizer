@@ -1,30 +1,75 @@
-.about-solutions { padding: 140px 0; background: #f3f5ef; }
+.about-solutions {
+  padding: 10px 0;
+  background: #f3f5ef;
+}
 
 .about-solutions-grid {
   display: grid;
-  grid-template-columns: minmax(320px, .9fr) minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
   gap: 100px;
   align-items: center;
 }
 
-.about-solutions-image { position: relative; }
+.about-solutions-image {
+  position: relative;
+}
 .about-solutions-image::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 55%;
   height: 55%;
   top: -22px;
   left: -22px;
-  border: 1px solid rgba(200,162,78,.38);
+  border: 1px solid rgba(200, 162, 78, 0.38);
 }
-.about-solutions-image img { position: relative; z-index: 1; width: 100%; height: 620px; object-fit: cover; }
-.about-solutions-copy p { max-width: 580px; margin: 0 0 38px; color: #596860; font: 16px/1.8 "DM Sans", Inter, sans-serif; }
-.about-solution-list { border-top: 1px solid #d7ddd6; }
-.about-solution-list div { display: flex; align-items: center; gap: 22px; padding: 18px 0; border-bottom: 1px solid #d7ddd6; }
-.about-solution-list span { color: #b18a3d; font: 700 10px "DM Sans", Inter, sans-serif; letter-spacing: .1em; }
-.about-solution-list strong { color: #25352b; font: 700 15px "Manrope", Inter, sans-serif; }
+.about-solutions-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+}
+.about-solutions-copy p {
+  max-width: 580px;
+  margin: 0 0 38px;
+  color: #596860;
+  font:
+    16px/1.8 "DM Sans",
+    Inter,
+    sans-serif;
+}
+.about-solution-list {
+  border-top: 1px solid #d7ddd6;
+}
+.about-solution-list div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 0;
+  border-bottom: 1px solid #d7ddd6;
+}
+.about-solution-list span {
+  color: #b18a3d;
+  font:
+    700 10px "DM Sans",
+    Inter,
+    sans-serif;
+  letter-spacing: 0.1em;
+}
+.about-solution-list strong {
+  color: #25352b;
+  font:
+    700 15px "Manrope",
+    Inter,
+    sans-serif;
+}
 
 @media (max-width: 900px) {
-  .about-solutions-grid { grid-template-columns: 1fr; gap: 65px; }
-  .about-solutions-image img { height: 520px; }
+  .about-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+  .about-solutions-image img {
+    height: 520px;
+  }
 }

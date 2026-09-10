@@ -12,7 +12,9 @@ function AboutHero() {
             <span>Agripex / About</span>
             <span className="about-hero-modern-number">01</span>
           </div>
-          <h1>Built for <em>better</em> agriculture.</h1>
+          <h1>
+            Built for <em>better</em> agriculture.
+          </h1>
           <p>
             Reliable agricultural inputs, practical guidance, and a commitment
             to helping farmers grow with confidence.
@@ -22,9 +24,16 @@ function AboutHero() {
           </a>
         </ScrollReveal>
 
-        <ScrollReveal className="about-hero-modern-visual" distance={50} delay={120}>
+        <ScrollReveal
+          className="about-hero-modern-visual"
+          distance={50}
+          delay={120}
+        >
           <div className="about-hero-modern-image-wrap">
-            <img src="/farmer-1.jpg" alt="Farmer working in an agricultural field" />
+            <img
+              src="/About-head.jpg"
+              alt="Farmer working in an agricultural field"
+            />
             <div className="about-hero-modern-image-tag">
               <span>FIELD / 2026</span>
               <span>AGRIPEX</span>

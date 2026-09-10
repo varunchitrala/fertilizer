@@ -12,7 +12,9 @@ function AboutStory() {
 
         <ScrollReveal className="about-story-copy" distance={35}>
           <span className="about-kicker">Experience shaped by the field</span>
-          <h2>A trusted partner for the <em>modern field.</em></h2>
+          <h2>
+            A trusted partner for the <em>modern field.</em>
+          </h2>
           <p>
             Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd. serves the
             agriculture sector with pesticides, fertilizers, and agricultural

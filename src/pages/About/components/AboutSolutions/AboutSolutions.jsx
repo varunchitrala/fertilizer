@@ -15,9 +15,15 @@ function AboutSolutions() {
           <img src="/farmer-2.jpg" alt="Farmer working with crops" />
         </ScrollReveal>
 
-        <ScrollReveal className="about-solutions-copy" distance={35} delay={120}>
+        <ScrollReveal
+          className="about-solutions-copy"
+          distance={35}
+          delay={120}
+        >
           <span className="about-kicker">What we provide</span>
-          <h2>From crop protection to <em>soil nutrition.</em></h2>
+          <h2>
+            From crop protection to <em>soil nutrition.</em>
+          </h2>
           <p>
             We bring together agricultural inputs and practical support to help
             customers make confident choices throughout the crop cycle.

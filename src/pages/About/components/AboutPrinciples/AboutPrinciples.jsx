@@ -24,8 +24,12 @@ function AboutPrinciples() {
     <section className="about-principles">
       <div className="container">
         <ScrollReveal className="about-section-heading" distance={35}>
-          <span className="about-eyebrow about-eyebrow-dark"><i /> Our principles</span>
-          <h2>Quality is the starting point. <em>Trust is the outcome.</em></h2>
+          <span className="about-eyebrow about-eyebrow-dark">
+            <i /> Our principles
+          </span>
+          <h2>
+            Quality  is  the starting  point. <em>Trust is the outcome.</em>
+          </h2>
         </ScrollReveal>
 
         <div className="about-principles-grid">

@@ -3,13 +3,14 @@
   overflow: hidden;
   background: #f7f8f2;
   color: #173b24;
+  margin-left: 20px;
 }
 
 .about-hero-modern {
-  min-height: 690px;
+  min-height: 300px;
   display: flex;
   align-items: center;
-  padding: 92px 0 34px;
+  padding: 40px 0 34px;
 }
 
 .about-hero-modern-bg {
