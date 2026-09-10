@@ -1,38 +1,33 @@
+import "./AboutStory.css";
 import ScrollReveal from "../../../../components/ScrollReveal";
 
 function AboutStory() {
   return (
     <section className="about-story" id="about-story">
-      <div className="header-container about-story-grid">
-        <ScrollReveal className="about-section-label" distance="left">
+      <div className="container about-story-grid">
+        <div className="about-section-label">
           <span>01</span>
           <p>Our story</p>
-        </ScrollReveal>
-        <ScrollReveal className="about-story-copy" delay={120} distance="up">
-          <span className="about-kicker">
-            Agripex Pesticide Fertilizer &amp; Chemical Private Limited
-          </span>
-          <h2>
-            A trusted partner for the <em>modern field.</em>
-          </h2>
+        </div>
+
+        <ScrollReveal className="about-story-copy" distance={35}>
+          <span className="about-kicker">Experience shaped by the field</span>
+          <h2>A trusted partner for the <em>modern field.</em></h2>
           <p>
-            AGRIPEX PESTICIDE FERTILIZER AND CHEMICAL PRIVATE LIMITED is a
-            trusted name in the agriculture sector, committed to providing
-            high-quality pesticides, fertilizers, and agricultural chemicals.
+            Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd. serves the
+            agriculture sector with pesticides, fertilizers, and agricultural
+            chemicals designed around real farming needs.
           </p>
           <p>
-            We support farmers with reliable products that enhance crop health,
-            productivity, and yield, while contributing to sustainable and
-            profitable farming practices across India.
+            From crop protection to soil and crop nutrition, our focus is on
+            reliable products, practical guidance, and long-term trust with
+            farmers, retailers, and distributors.
           </p>
         </ScrollReveal>
-        <ScrollReveal
-          className="about-story-image"
-          delay={180}
-          distance="right"
-        >
-          <img src="/coursel-main.jpg" alt="Crop field" loading="lazy" />
-          <span>AGRIPEX / FIELD FOCUS</span>
+
+        <ScrollReveal className="about-story-image" distance={45} delay={120}>
+          <img src="/coursel-main.jpg" alt="Agricultural field" />
+          <span>AGRICULTURE / FIELD PARTNERSHIP</span>
         </ScrollReveal>
       </div>
     </section>
