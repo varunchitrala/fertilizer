@@ -1,8 +1,11 @@
-import ScrollReveal from '../../ScrollReveal'
+import ScrollReveal from "../../../../components/ScrollReveal";
 
 function AboutHero() {
   return (
-    <section className="about-hero about-hero-modern" aria-labelledby="about-hero-title">
+    <section
+      className="about-hero about-hero-modern"
+      aria-labelledby="about-hero-title"
+    >
       <div className="about-hero-modern-bg" aria-hidden="true" />
       <div className="header-container about-hero-modern-grid">
         <div className="about-hero-modern-copy">
@@ -20,7 +23,9 @@ function AboutHero() {
             </h1>
 
             <p>
-              Reliable agricultural inputs and practical solutions designed around healthier crops, stronger productivity and sustainable farming.
+              Reliable agricultural inputs and practical solutions designed
+              around healthier crops, stronger productivity and sustainable
+              farming.
             </p>
 
             <a className="about-hero-modern-link" href="#about-story">
@@ -30,9 +35,16 @@ function AboutHero() {
           </ScrollReveal>
         </div>
 
-        <ScrollReveal className="about-hero-modern-visual" delay={140} distance="right">
+        <ScrollReveal
+          className="about-hero-modern-visual"
+          delay={140}
+          distance="right"
+        >
           <div className="about-hero-modern-image-wrap">
-            <img src="/farmer-1.jpg" alt="Farmer working in an agricultural field" />
+            <img
+              src="/farmer-1.jpg"
+              alt="Farmer working in an agricultural field"
+            />
             <div className="about-hero-modern-image-tag">
               <span>AGRIPEX</span>
               <span>FIELD / INDIA</span>
@@ -50,7 +62,7 @@ function AboutHero() {
         <span>2026</span>
       </div>
     </section>
-  )
+  );
 }
 
-export default AboutHero
+export default AboutHero;
