@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Solutions from "./components/Solutions/Solutions";
+import Gallery from "./components/Gallery/Gallery";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
 
@@ -11,6 +12,7 @@ function Home() {
       <main>
         <Hero />
         <Solutions />
+        <Gallery />
         <Testimonials />
       </main>
       <Footer />
