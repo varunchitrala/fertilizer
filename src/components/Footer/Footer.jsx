@@ -1,14 +1,14 @@
-import './Footer.css'
-import ScrollReveal from '../ScrollReveal'
+import "./Footer.css";
+import ScrollReveal from "../ScrollReveal";
 
 const footerLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Products', href: '#products' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Awards', href: '#awards' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Awards", href: "#awards" },
+  { label: "Contact", href: "#contact" },
+];
 
 function Footer() {
   return (
@@ -19,10 +19,19 @@ function Footer() {
       <div className="header-container footer-container">
         <ScrollReveal className="footer-cta" distance="up">
           <div>
-            <span className="footer-eyebrow"><i /> Agriculture, with purpose</span>
-            <h2>Let&apos;s grow<br /><em>what matters.</em></h2>
+            <span className="footer-eyebrow">
+              <i /> Agriculture, with purpose
+            </span>
+            <h2>
+              Let&apos;s grow
+              <br />
+              <em>what matters.</em>
+            </h2>
           </div>
-          <a className="footer-cta-button" href="mailto:agripexpestiside1995@gmail.com">
+          <a
+            className="footer-cta-button"
+            href="mailto:agripexpestiside1995@gmail.com"
+          >
             <span>Start a conversation</span>
             <strong>↗</strong>
           </a>
@@ -41,37 +50,60 @@ function Footer() {
             <span className="footer-column-title">Explore</span>
             <nav aria-label="Footer navigation">
               {footerLinks.map((link) => (
-                <a href={link.href} key={link.label}>{link.label}</a>
+                <a href={link.href} key={link.label}>
+                  {link.label}
+                </a>
               ))}
             </nav>
           </ScrollReveal>
 
-          <ScrollReveal className="footer-column footer-contact" delay={260} distance="right">
+          <ScrollReveal
+            className="footer-column footer-contact"
+            delay={260}
+            distance="right"
+          >
             <span className="footer-column-title">Connect</span>
             <a href="tel:+917770047272">+91 7770047272</a>
-            <a href="mailto:agripexpestiside1995@gmail.com">agripexpestiside1995@gmail.com</a>
+            <a href="mailto:agripexpestiside1995@gmail.com">
+              agripexpestiside1995@gmail.com
+            </a>
             <div className="footer-socials" aria-label="Social media links">
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="Instagram">◎</a>
-              <a href="#" aria-label="LinkedIn">in</a>
-              <a href="#" aria-label="YouTube">▶</a>
+              <a href="#" aria-label="Facebook">
+                f
+              </a>
+              <a href="#" aria-label="Instagram">
+                ◎
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                in
+              </a>
+              <a href="#" aria-label="YouTube">
+                ▶
+              </a>
             </div>
           </ScrollReveal>
         </div>
 
-        <div className="footer-wordmark" aria-hidden="true">AGRIPEX</div>
+        <div className="footer-wordmark" aria-hidden="true">
+          AGRIPEX
+        </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd.</span>
+          <span>
+            © {new Date().getFullYear()} Agripex Pesticide Fertilizer &amp;
+            Chemical Pvt. Ltd.
+          </span>
           <div>
             <a href="#privacy">Privacy</a>
             <a href="#terms">Terms</a>
           </div>
-          <span className="footer-made">Growing with India <b>•</b></span>
+          <span className="footer-made">
+            Growing with India <b>•</b>
+          </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

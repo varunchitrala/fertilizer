@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import TopBar from './TopBar'
-import BrandHeader from './BrandHeader'
-import Navbar from './Navbar'
-import './Header.css'
+import { useState } from "react";
+import TopBar from "./TopBar";
+import BrandHeader from "./BrandHeader";
+import Navbar from "./Navbar";
+import "./Header.css";
 
 function Header() {
-  const [language, setLanguage] = useState('en')
-  const [productsOpen, setProductsOpen] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [language, setLanguage] = useState("en");
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="site-header">
@@ -21,7 +21,7 @@ function Header() {
         setMobileOpen={setMobileOpen}
       />
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -3,22 +3,22 @@ function LanguageSwitcher({ language, setLanguage }) {
     <div className="language-switcher" aria-label="Language selector">
       <button
         type="button"
-        className={language === 'en' ? 'active' : ''}
-        onClick={() => setLanguage('en')}
-        aria-pressed={language === 'en'}
+        className={language === "en" ? "active" : ""}
+        onClick={() => setLanguage("en")}
+        aria-pressed={language === "en"}
       >
         EN
       </button>
       <button
         type="button"
-        className={language === 'mr' ? 'active' : ''}
-        onClick={() => setLanguage('mr')}
-        aria-pressed={language === 'mr'}
+        className={language === "mr" ? "active" : ""}
+        onClick={() => setLanguage("mr")}
+        aria-pressed={language === "mr"}
       >
         मराठी
       </button>
     </div>
-  )
+  );
 }
 
-export default LanguageSwitcher
+export default LanguageSwitcher;
