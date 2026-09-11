@@ -83,79 +83,73 @@ const products = [
     },
   },
   {
-    name: "00:50:62",
+    name: " Agripex 00:50:62",
     description:
       "A high-phosphorus and potassium formulation designed for crop nutrition across key growth stages.",
-    image: "/products/00-50-62.jpg",
+    image: "/a2.jpg",
   },
   {
     name: "Calibor",
     description:
       "A calcium and boron based nutrition product intended to support crop quality and development.",
-    image: "/products/calibor.jpg",
+    image: "/a3.jpg",
   },
   {
-    name: "28:28:00",
+    name: " Agripex 28:28:00",
     description:
       "A balanced nitrogen and phosphorus fertilizer formulation for crop nutrition.",
-    image: "/products/28-28-00.jpg",
+    image: "/a4.jpg",
   },
   {
-    name: "25:25:25",
-    description:
-      "A balanced NPK formulation designed to provide essential nutrients for crop growth.",
-    image: "/products/25-25-25.jpg",
-  },
-  {
-    name: "14:18:00",
+    name: " Agripex 14:18:00",
     description:
       "A nitrogen and phosphorus fertilizer formulation for supporting crop nutrition.",
-    image: "/products/14-18-00.jpg",
+    image: "/14.18.jpg",
   },
   {
-    name: "03:50:50",
+    name: " Agripex 03:50:50",
     description:
       "A phosphorus and potassium rich formulation for crop nutrition and development.",
     image: "/products/03-50-50.jpg",
   },
   {
-    name: "00:52:34",
+    name: " Agripex 00:52:34",
     description:
       "A phosphorus and potassium fertilizer formulation for targeted crop nutrition.",
     image: "/products/00-52-34.jpg",
   },
   {
-    name: "00:09:46",
+    name: " Agripex 00:09:46",
     description:
       "A potassium-focused fertilizer formulation for crop nutrition needs.",
     image: "/products/00-09-46.jpg",
   },
   {
-    name: "13:00:45",
+    name: " Agripex 13:00:45",
     description:
       "A potassium-rich fertilizer formulation with nitrogen for crop nutrition.",
     image: "/products/13-00-45.jpg",
   },
   {
-    name: "22:22:11",
+    name: " Agripex 22:22:11",
     description:
       "A balanced nutrient formulation providing nitrogen, phosphorus and potassium.",
     image: "/products/22-22-11.jpg",
   },
   {
-    name: "24:24:00",
+    name: " Agripex 24:24:00",
     description:
       "A nitrogen and phosphorus fertilizer formulation for balanced crop nutrition.",
     image: "/products/24-24-00.jpg",
   },
   {
-    name: "00:42:47",
+    name: " Agripex 00:42:47",
     description:
       "A phosphorus and potassium formulation for supporting flowering and crop development.",
     image: "/products/00-42-47.jpg",
   },
   {
-    name: "00:50:50",
+    name: " Agripex 00:50:50",
     description:
       "A phosphorus and potassium fertilizer formulation for crop nutrition.",
     image: "/products/00-50-50.jpg",
@@ -173,19 +167,19 @@ const products = [
     image: "/products/urea.jpg",
   },
   {
-    name: "19:19:19",
+    name: " Agripex 19:19:19",
     description:
       "A balanced NPK formulation for supplying essential nutrients during crop growth.",
     image: "/products/19-19-19.jpg",
   },
   {
-    name: "00:32:34",
+    name: " Agripex 00:32:34",
     description:
       "A phosphorus and potassium fertilizer formulation for crop nutrition.",
     image: "/products/00-32-34.jpg",
   },
   {
-    name: "10:26:26",
+    name: " Agripex 10:26:26",
     description:
       "A nitrogen, phosphorus and potassium formulation for balanced crop nutrition.",
     image: "/products/10-26-26.jpg",

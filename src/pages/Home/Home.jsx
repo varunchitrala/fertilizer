@@ -38,8 +38,8 @@ function Home() {
 function ProductsPreview() {
   const featuredProducts = [
     { name: "Calcium Nitrate", type: "Calcium + Magnesium", image: "/a1.jpg" },
-    { name: "00:50:62", type: "Water-soluble fertilizer", image: "/coursel-2.jpg" },
-    { name: "Calibor", type: "Micronutrient solution", image: "/coursel-3.jpg" },
+    { name: "00:50:62", type: "Water-soluble fertilizer", image: "/a2.jpg" },
+    { name: "Calibor", type: "Micronutrient solution", image: "/a3.jpg" },
   ];
 
   return (
