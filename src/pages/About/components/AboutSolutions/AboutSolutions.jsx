@@ -9,19 +9,11 @@ const solutions = [
 
 function AboutSolutions() {
   return (
-    <section className="about-solutions">
+    <section className="about-solutions" aria-labelledby="solutions-title">
       <div className="container about-solutions-grid">
-        <ScrollReveal className="about-solutions-image" distance={45}>
-          <img src="/farmer-2.jpg" alt="Farmer working with crops" />
-        </ScrollReveal>
-
-        <ScrollReveal
-          className="about-solutions-copy"
-          distance={35}
-          delay={120}
-        >
+        <ScrollReveal className="about-solutions-copy" distance={35}>
           <span className="about-kicker">What we provide</span>
-          <h2>
+          <h2 id="solutions-title">
             From crop protection to <em>soil nutrition.</em>
           </h2>
           <p>
@@ -36,6 +28,10 @@ function AboutSolutions() {
               </div>
             ))}
           </div>
+        </ScrollReveal>
+
+        <ScrollReveal className="about-solutions-image" distance={45} delay={120}>
+          <img src="/farmer-2.jpg" alt="Farmer working with crops" />
         </ScrollReveal>
       </div>
     </section>
