@@ -1,93 +1,94 @@
-import "./Solutions.css";
+import { Link } from "react-router-dom";
 import ScrollReveal from "../../../../components/ScrollReveal";
+import "./Solutions.css";
 
-const solutions = [
+const offerings = [
   {
     number: "01",
-    title: "Healthy Soil",
-    text: "Supporting better nutrient management and stronger soil foundations for productive fields.",
-    image: "/coursel-2.jpg",
-    tag: "Foundation",
+    title: "Water-Soluble Fertilizers",
+    text: "A focused range of soluble NPK and nutrient formulations for efficient crop nutrition.",
+    examples: "00:50:62 · 28:28:00 · 25:25:25",
   },
   {
     number: "02",
-    title: "Stronger Crops",
-    text: "Agricultural inputs designed to support healthy crop growth throughout the growing cycle.",
-    image: "/coursel-main.jpg",
-    tag: "Growth",
+    title: "Specialty Fertilizers",
+    text: "Specialized formulations designed around specific nutritional requirements in the crop cycle.",
+    examples: "Calcium Nitrate · Nutrigen Potassium · Bundha Special",
   },
   {
     number: "03",
-    title: "Crop Protection",
-    text: "Practical solutions that help farmers protect crops and maintain field performance.",
-    image: "/coursel-3.jpg",
-    tag: "Protection",
+    title: "Micronutrients",
+    text: "Targeted nutrient products that complement crop nutrition where specific micronutrients are required.",
+    examples: "Calibor · 19:19:19 · 10:26:26",
   },
   {
     number: "04",
-    title: "Better Yields",
-    text: "Reliable solutions focused on helping farmers improve productivity and consistency.",
-    image: "/coursel-4.jpg",
-    tag: "Outcome",
+    title: "Crop Solutions",
+    text: "A broader agricultural range supporting practical crop and field requirements beyond core nutrition.",
+    examples: "DAP · Urea · Nimatocide+ · Ven Special",
   },
 ];
 
 function Solutions() {
   return (
-    <section className="solutions" id="solutions">
+    <section className="solutions" id="solutions" aria-labelledby="solutions-title">
       <div className="header-container solutions-container">
         <ScrollReveal className="solutions-intro" distance="up">
           <div className="solutions-kicker">
-            <span /> What We Do
+            <span /> Our Range
           </div>
+
           <div className="solutions-heading-wrap">
-            <h2>
-              From <em>soil</em>
-              <br />
-              to <strong>success.</strong>
-            </h2>
+            <div>
+              <span className="solutions-eyebrow">Agricultural solutions</span>
+              <h2 id="solutions-title">
+                Products for the
+                <br />
+                <em>needs of the field.</em>
+              </h2>
+            </div>
+
             <p>
-              Agriculture is more than growing a crop. It is about understanding
-              the field, solving real challenges and giving every crop the right
-              support to grow.
+              From crop nutrition to specialized agricultural inputs, AGRIPEX
+              brings together a practical product range for different crop and
+              field requirements.
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="solutions-grid">
-          {solutions.map((solution, index) => (
-            <ScrollReveal
-              key={solution.number}
-              delay={index * 100}
-              distance={index % 2 === 0 ? "up" : "down"}
-            >
-              <article className="solution-card">
-                <div className="solution-card-image">
-                  <img src={solution.image} alt="" loading="lazy" />
-                  <div className="solution-card-overlay" />
-                  <span className="solution-tag">{solution.tag}</span>
-                  <span className="solution-number">{solution.number}</span>
+        <div className="solutions-list">
+          {offerings.map((offering, index) => (
+            <ScrollReveal key={offering.number} delay={index * 70} distance="up">
+              <article className="solution-row">
+                <div className="solution-row-number">{offering.number}</div>
+
+                <div className="solution-row-main">
+                  <h3>{offering.title}</h3>
+                  <p>{offering.text}</p>
                 </div>
 
-                <div className="solution-card-content">
-                  <h3>{solution.title}</h3>
-                  <p>{solution.text}</p>
-                  <span className="solution-card-link" aria-hidden="true">
-                    Explore <span>↗</span>
-                  </span>
+                <div className="solution-row-examples">
+                  <span>Selected products</span>
+                  <p>{offering.examples}</p>
                 </div>
 
-                <div className="solution-card-line" />
+                <Link className="solution-row-action" to="/products" aria-label={`Explore ${offering.title}`}>
+                  <span>Explore range</span>
+                  <b aria-hidden="true">↗</b>
+                </Link>
               </article>
             </ScrollReveal>
           ))}
         </div>
 
-        <ScrollReveal className="solutions-footer" delay={350} distance="up">
-          <span>Built around the needs of agriculture</span>
-          <a href="#products">
-            Explore our solutions <span>↗</span>
-          </a>
+        <ScrollReveal className="solutions-footer" delay={280} distance="up">
+          <p>
+            Looking for a specific product or application?
+          </p>
+          <Link className="solutions-catalog-cta" to="/products">
+            <span>View product catalogue</span>
+            <b aria-hidden="true">↗</b>
+          </Link>
         </ScrollReveal>
       </div>
     </section>
