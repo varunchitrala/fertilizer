@@ -5,23 +5,23 @@ import "./WhyChoose.css";
 const reasons = [
   {
     number: "01",
-    title: "Agriculture-focused approach",
-    text: "Our website and product range are built around practical agricultural requirements and the realities of crop nutrition.",
+    title: "Agriculture first",
+    text: "An approach shaped around practical agricultural requirements and crop nutrition.",
   },
   {
     number: "02",
     title: "Practical product range",
-    text: "A focused range of fertilizers and agricultural inputs gives growers options for different crop and application requirements.",
+    text: "A focused range of fertilizers and agricultural inputs for different requirements.",
   },
   {
     number: "03",
     title: "Field-oriented thinking",
-    text: "We keep the focus on useful solutions that can translate product information into clearer decisions in the field.",
+    text: "Clear product information presented with practical application in mind.",
   },
   {
     number: "04",
-    title: "Support when it matters",
-    text: "From product information to enquiries, we make it easier for customers to find the right information and connect with our team.",
+    title: "Direct support",
+    text: "A clear route to product information and to discussing your specific requirement.",
   },
 ];
 
@@ -31,31 +31,32 @@ function WhyChoose() {
       <div className="header-container why-choose-container">
         <ScrollReveal className="why-choose-intro" distance="up">
           <div className="why-choose-kicker">
-            <span /> Why AGRIPEX
+            <span aria-hidden="true" />
+            <span className="why-choose-kicker-text">Why AGRIPEX</span>
           </div>
+
           <div className="why-choose-heading-wrap">
             <div>
               <span className="why-choose-eyebrow">A practical approach to agriculture</span>
               <h2 id="why-choose-title">
-                Built around
+                A better understanding
                 <br />
-                <em>the field.</em>
+                <em>of agriculture.</em>
               </h2>
             </div>
             <p>
-              Choosing an agricultural partner is about more than a product list.
-              It is about relevance, clarity and a practical understanding of what
-              growers need.
+              We keep the focus on relevance, clear product information and the
+              practical needs behind an agricultural requirement.
             </p>
           </div>
         </ScrollReveal>
 
         <div className="why-choose-layout">
           <ScrollReveal className="why-choose-visual" distance="left">
-            <img src="/coursel-3.jpg" alt="Agricultural crop field" loading="lazy" />
+            <img src="/coursel-3.jpg" alt="Agricultural field" loading="lazy" />
             <div className="why-choose-visual-caption">
               <span>AGRIPEX</span>
-              <strong>Focused on better agricultural decisions.</strong>
+              <strong>Focused on practical agricultural requirements.</strong>
             </div>
           </ScrollReveal>
 
@@ -73,9 +74,9 @@ function WhyChoose() {
             ))}
 
             <ScrollReveal className="why-choose-action" delay={320} distance="up">
-              <Link to="/about" className="why-choose-link">
-                <span>Learn more about AGRIPEX</span>
-                <b aria-hidden="true">↗</b>
+              <Link to="/about" className="why-choose-link" aria-label="Why AGRIPEX, learn more on the About page">
+                <span>Why AGRIPEX</span>
+                <b aria-hidden="true">→</b>
               </Link>
             </ScrollReveal>
           </div>
