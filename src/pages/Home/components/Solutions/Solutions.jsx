@@ -67,8 +67,8 @@ function Solutions() {
                 <div className="solution-content">
                   <h3>{offering.title}</h3>
                   <p>{offering.text}</p>
-                  <Link className="solution-cta" to="/products" aria-label={`View ${offering.title}`}>
-                    <span>View products</span>
+                  <Link className="solution-cta" to="/products" aria-label={`View ${offering.title} products`}>
+                    <span>See Products</span>
                     <b aria-hidden="true">↗</b>
                   </Link>
                 </div>
@@ -83,7 +83,7 @@ function Solutions() {
             <p>Find the formulation suited to your crop and application.</p>
           </div>
           <Link className="solutions-catalog-cta" to="/products">
-            <span>Browse full product catalogue</span>
+            <span>View All Products</span>
             <b aria-hidden="true">↗</b>
           </Link>
         </ScrollReveal>
