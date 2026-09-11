@@ -6,18 +6,18 @@ const navItems = [
   { label: "Products", mr: "उत्पादने", href: "/products" },
   { label: "Gallery", mr: "गॅलरी", href: "/gallery" },
   { label: "Awards", mr: "पुरस्कार", href: "#" },
-  { label: "Contact", mr: "संपर्क", href: "#contact" },
+  { label: "Contact", mr: "संपर्क", href: "/contact" },
 ];
 
 function Navbar({ mobileOpen, setMobileOpen }) {
   const location = useLocation();
-  const getLabel = (item) => (location.pathname === "/products" && item.label === "Products" ? "Products" : item.label);
+  const getLabel = (item) => item.label;
 
   return (
     <div className="navigation-bar">
       <div className="header-container navigation-inner">
         <nav className="nav-links" aria-label="Primary navigation">
-          {navItems.map((item) => (
+          {navItems.map((item) =>
             item.href.startsWith("/") ? (
               <Link
                 className={`nav-link${location.pathname === item.href ? " active" : ""}`}
@@ -29,10 +29,10 @@ function Navbar({ mobileOpen, setMobileOpen }) {
               </Link>
             ) : (
               <a className="nav-link" href={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
-                {item.label === "Contact" ? "Contact" : getLabel(item)}
+                {getLabel(item)}
               </a>
             )
-          ))}
+          )}
         </nav>
 
         <button
@@ -51,11 +51,7 @@ function Navbar({ mobileOpen, setMobileOpen }) {
           <nav className="mobile-navigation" aria-label="Mobile navigation">
             {navItems.map((item) =>
               item.href.startsWith("/") ? (
-                <Link
-                  to={item.href}
-                  key={item.label}
-                  onClick={() => setMobileOpen(false)}
-                >
+                <Link to={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
                   {getLabel(item)}
                 </Link>
               ) : (
