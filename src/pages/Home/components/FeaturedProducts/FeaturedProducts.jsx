@@ -15,14 +15,16 @@ const products = [
     number: "02",
     name: "00:50:62",
     category: "Water-soluble fertilizer",
-    description: "A phosphorus and potassium formulation from the agricultural range.",
+    description:
+      "A phosphorus and potassium formulation from the agricultural range.",
     image: "/a2.jpg",
   },
   {
     number: "03",
     name: "Calibor",
     category: "Micronutrient",
-    description: "A calcium and boron based nutrition product for agricultural use.",
+    description:
+      "A calcium and boron based nutrition product for agricultural use.",
     image: "/a3.jpg",
   },
 ];
@@ -32,7 +34,7 @@ function FeaturedProducts() {
     <section className="featured-products" aria-labelledby="featured-products-title">
       <div className="header-container featured-products-container">
         <ScrollReveal className="featured-products-heading" distance="up">
-          <div>
+          <div className="featured-products-heading-copy">
             <span className="featured-products-kicker">Our products</span>
             <h2 id="featured-products-title">
               Explore our
@@ -52,69 +54,54 @@ function FeaturedProducts() {
           </div>
         </ScrollReveal>
 
-        <div className="featured-products-showcase">
-          <ScrollReveal className="featured-product-feature" distance="up">
-            <div className="featured-product-feature-image">
-              <img
-                src={products[0].image}
-                alt="Calcium Nitrate fertilizer product"
-                loading="lazy"
-              />
-              <div className="featured-product-feature-label">
-                <span>01</span>
-                <strong>Featured product</strong>
-              </div>
-            </div>
-
-            <div className="featured-product-feature-info">
-              <div>
-                <span className="featured-product-category">{products[0].category}</span>
-                <h3>{products[0].name}</h3>
-              </div>
-              <div className="featured-product-feature-copy">
-                <p>{products[0].description}</p>
-                <Link className="featured-product-primary-cta" to="/products">
-                  <span>Explore product</span>
-                  <b aria-hidden="true">↗</b>
+        <div className="featured-products-grid">
+          {products.map((product, index) => (
+            <ScrollReveal
+              key={product.name}
+              className="featured-product-card-wrap"
+              distance="up"
+              delay={index * 90}
+            >
+              <article className="featured-product-card">
+                <Link
+                  to="/products"
+                  className="featured-product-card-image-link"
+                  aria-label={`View ${product.name} details`}
+                >
+                  <div className="featured-product-card-image">
+                    <img
+                      src={product.image}
+                      alt={`${product.name} fertilizer product`}
+                      loading="lazy"
+                    />
+                    <span className="featured-product-card-number">{product.number}</span>
+                  </div>
                 </Link>
-              </div>
-            </div>
-          </ScrollReveal>
 
-          <div className="featured-products-list">
-            <div className="featured-products-list-heading">
-              <span>02 — 03</span>
-              <span>More from the range</span>
-            </div>
-
-            {products.slice(1).map((product, index) => (
-              <ScrollReveal
-                key={product.name}
-                className="featured-product-row"
-                distance="right"
-                delay={index * 90}
-              >
-                <div className="featured-product-row-number">{product.number}</div>
-                <div className="featured-product-row-image">
-                  <img
-                    src={product.image}
-                    alt={`${product.name} fertilizer product`}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="featured-product-row-content">
-                  <span className="featured-product-category">{product.category}</span>
+                <div className="featured-product-card-content">
+                  <div className="featured-product-card-meta">
+                    <span>{product.number}</span>
+                    <span>{product.category}</span>
+                  </div>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <Link className="featured-product-secondary-cta" to="/products">
+                  <Link className="featured-product-card-cta" to="/products">
                     <span>View product</span>
                     <b aria-hidden="true">↗</b>
                   </Link>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              </article>
+            </ScrollReveal>
+          ))}
         </div>
+
+        <ScrollReveal className="featured-products-footer" delay={180} distance="up">
+          <span>Selected products from the AGRIPEX agricultural range</span>
+          <Link className="featured-products-footer-link" to="/products">
+            <span>Explore full catalogue</span>
+            <b aria-hidden="true">↗</b>
+          </Link>
+        </ScrollReveal>
       </div>
     </section>
   );
