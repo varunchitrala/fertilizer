@@ -15,11 +15,7 @@ function AboutPreview() {
         <div className="about-preview-grid">
           <ScrollReveal className="about-preview-visual" distance="up">
             <div className="about-preview-image-wrap">
-              <img
-                src="/coursel-main.jpg"
-                alt="Agricultural field and crop growth"
-                loading="lazy"
-              />
+              <img src="/coursel-main.jpg" alt="Agricultural field and crop growth" loading="lazy" />
               <div className="about-preview-image-caption">
                 <span>Focused on agriculture</span>
                 <span aria-hidden="true">↗</span>
@@ -47,21 +43,12 @@ function AboutPreview() {
             </p>
 
             <div className="about-preview-points">
-              <div>
-                <span>01</span>
-                <strong>Understand the field</strong>
-              </div>
-              <div>
-                <span>02</span>
-                <strong>Offer practical solutions</strong>
-              </div>
-              <div>
-                <span>03</span>
-                <strong>Build lasting trust</strong>
-              </div>
+              <div><span>01</span><strong>Understand the field</strong></div>
+              <div><span>02</span><strong>Offer practical solutions</strong></div>
+              <div><span>03</span><strong>Build lasting trust</strong></div>
             </div>
 
-            <Link className="about-preview-link" to="/about">
+            <Link className="about-preview-primary-cta" to="/about">
               <span>Discover AGRIPEX</span>
               <b aria-hidden="true">↗</b>
             </Link>
