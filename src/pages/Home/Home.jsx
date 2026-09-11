@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
 import Solutions from "./components/Solutions/Solutions";
 import WhyChoose from "./components/WhyChoose/WhyChoose";
+import CropApplications from "./components/CropApplications/CropApplications";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
 import "./home-products-preview.css";
@@ -16,6 +17,7 @@ function Home() {
         <AboutPreview />
         <Solutions />
         <WhyChoose />
+        <CropApplications />
         <section className="home-products-preview" id="products" aria-labelledby="home-products-title">
           <div className="header-container">
             <div className="home-products-preview-heading">
