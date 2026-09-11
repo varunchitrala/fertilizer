@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
 import Solutions from "./components/Solutions/Solutions";
 import WhyChoose from "./components/WhyChoose/WhyChoose";
+import Certifications from "./components/Certifications/Certifications";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
 import "./home-products-preview.css";
@@ -32,6 +33,7 @@ function Home() {
             <ProductsPreview />
           </div>
         </section>
+        <Certifications />
         <Testimonials />
       </main>
       <Footer />
