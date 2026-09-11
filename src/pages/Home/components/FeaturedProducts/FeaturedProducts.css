@@ -1,1 +1,290 @@
-.featured-products{padding:40px 0;background:var(--agri-paper);border-top:1px solid var(--agri-rule)}.featured-products-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;padding-bottom:46px;border-bottom:1px solid var(--agri-rule)}.featured-products-kicker{display:block;margin-bottom:16px;color:var(--agri-gold);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.featured-products-heading h2{max-width:760px;color:var(--agri-ink);font-family:"Manrope",sans-serif;font-size:clamp(2.6rem,5vw,5.2rem);font-weight:700;letter-spacing:-.055em;line-height:.98}.featured-products-catalog-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 17px 0 20px;background:var(--agri-forest);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:transform 220ms ease,background 220ms ease,box-shadow 220ms ease}.featured-products-catalog-link b{display:grid;width:28px;height:28px;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;font-size:.95rem;font-weight:400;transition:transform 220ms ease}.featured-products-catalog-link:hover{transform:translateY(-2px);background:var(--agri-forest-deep);box-shadow:0 9px 22px rgba(16,45,27,.16)}.featured-products-catalog-link:hover b{transform:translate(2px,-2px)}.featured-products-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(360px,.85fr)}.featured-product-main{padding:54px 7.5% 0 0;border-right:1px solid var(--agri-rule)}.featured-product-image-link,.featured-product-supporting-image-link{display:block;text-decoration:none}.featured-product-image{position:relative;aspect-ratio:1.55/1;overflow:hidden;background:#e8ece4}.featured-product-image img,.featured-product-supporting-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 650ms cubic-bezier(.2,.65,.2,1)}.featured-product-image-link:hover img,.featured-product-supporting-image-image-link:hover img{transform:scale(1.035)}.featured-product-image-index{position:absolute;right:20px;bottom:18px;display:grid;width:46px;height:46px;place-items:center;border:1px solid rgba(255,255,255,.7);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;backdrop-filter:blur(5px)}.featured-product-main-copy{padding:30px 0 0}.featured-product-main-copy>div{display:flex;align-items:center;gap:13px;margin-bottom:13px}.featured-product-number{color:var(--agri-gold);font-size:.7rem;font-weight:800;letter-spacing:.1em}.featured-product-category{color:var(--agri-muted);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.featured-product-main-copy h3,.featured-product-supporting-copy h3{color:var(--agri-ink);font-family:"Manrope",sans-serif;font-weight:700;letter-spacing:-.035em}.featured-product-main-copy h3{font-size:clamp(2rem,3.2vw,3.25rem);line-height:1}.featured-product-main-copy p{max-width:580px;margin:15px 0 24px;color:var(--agri-muted);font-size:.98rem;line-height:1.7}.featured-product-detail{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 13px 0 16px;border:1px solid var(--agri-forest);color:var(--agri-forest);font-size:.68rem;font-weight:800;letter-spacing:.09em;text-decoration:none;text-transform:uppercase;transition:transform 220ms ease,background 220ms ease,color 220ms ease}.featured-product-detail b{font-size:1rem;font-weight:400;transition:transform 220ms ease}.featured-product-detail:hover{transform:translateY(-2px);background:var(--agri-forest);color:#fff}.featured-product-detail:hover b{transform:translate(2px,-2px)}.featured-products-supporting{padding-left:7.5%}.featured-product-supporting{display:grid;grid-template-columns:minmax(130px,.72fr) minmax(0,1fr);gap:28px;align-items:center;padding:54px 0;border-bottom:1px solid var(--agri-rule)}.featured-product-supporting:last-child{border-bottom:0}.featured-product-supporting-image{position:relative;aspect-ratio:1/1;overflow:hidden;background:#e8ece4}.featured-product-supporting-image span{position:absolute;top:12px;left:12px;color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-shadow:0 1px 8px rgba(0,0,0,.25)}.featured-product-supporting-copy h3{margin-top:8px;font-size:clamp(1.5rem,2.2vw,2.15rem);line-height:1.05}.featured-product-supporting-copy p{margin:11px 0 20px;color:var(--agri-muted);font-size:.88rem;line-height:1.6}@media(max-width:900px){.featured-products{padding:88px 0 96px}.featured-products-layout{grid-template-columns:1fr}.featured-product-main{padding-right:0;padding-bottom:54px;border-right:0;border-bottom:1px solid var(--agri-rule)}.featured-products-supporting{padding-left:0}}@media(max-width:620px){.featured-products{padding:72px 0 78px}.featured-products-heading{display:block;padding-bottom:30px}.featured-products-heading h2{font-size:clamp(2.3rem,13vw,3.7rem)}.featured-products-catalog-link{width:100%;margin-top:28px}.featured-product-main{padding-top:32px;padding-bottom:38px}.featured-product-supporting{grid-template-columns:110px minmax(0,1fr);gap:18px;padding:34px 0}.featured-product-supporting-copy p{display:none}.featured-product-main-copy p{font-size:.9rem}.featured-product-detail{width:100%}}@media(prefers-reduced-motion:reduce){.featured-products-catalog-link,.featured-products-catalog-link b,.featured-product-image img,.featured-product-supporting-image img,.featured-product-detail,.featured-product-detail b{transition:none}}
+.featured-products {
+  padding: 40px 0;
+  background: var(--agri-paper);
+  border-top: 1px solid var(--agri-rule);
+}
+.featured-products-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  padding-bottom: 46px;
+  border-bottom: 1px solid var(--agri-rule);
+}
+.featured-products-kicker {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--agri-gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.featured-products-heading h2 {
+  max-width: 760px;
+  color: var(--agri-ink);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+.featured-products-catalog-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 17px 0 20px;
+  background: var(--agri-forest);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+.featured-products-catalog-link b {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: transform 220ms ease;
+}
+.featured-products-catalog-link:hover {
+  transform: translateY(-2px);
+  background: var(--agri-forest-deep);
+  box-shadow: 0 9px 22px rgba(16, 45, 27, 0.16);
+}
+.featured-products-catalog-link:hover b {
+  transform: translate(2px, -2px);
+}
+.featured-products-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.85fr);
+}
+.featured-product-main {
+  padding: 54px 7.5% 0 0;
+  border-right: 1px solid var(--agri-rule);
+}
+.featured-product-image-link,
+.featured-product-supporting-image-link {
+  display: block;
+  text-decoration: none;
+}
+.featured-product-image {
+  position: relative;
+  aspect-ratio: 1.55/1;
+  overflow: hidden;
+  background: #e8ece4;
+}
+.featured-product-image img,
+.featured-product-supporting-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 650ms cubic-bezier(0.2, 0.65, 0.2, 1);
+}
+.featured-product-image-link:hover img,
+.featured-product-supporting-image-image-link:hover img {
+  transform: scale(1.035);
+}
+.featured-product-image-index {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(5px);
+}
+.featured-product-main-copy {
+  padding: 30px 0 0;
+}
+.featured-product-main-copy > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 13px;
+}
+.featured-product-number {
+  color: var(--agri-gold);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.featured-product-category {
+  color: var(--agri-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.featured-product-main-copy h3,
+.featured-product-supporting-copy h3 {
+  color: var(--agri-ink);
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+.featured-product-main-copy h3 {
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  line-height: 1;
+}
+.featured-product-main-copy p {
+  max-width: 580px;
+  margin: 15px 0 24px;
+  color: var(--agri-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+.featured-product-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 13px 0 16px;
+  border: 1px solid var(--agri-forest);
+  color: var(--agri-forest);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    color 220ms ease;
+}
+.featured-product-detail b {
+  font-size: 1rem;
+  font-weight: 400;
+  transition: transform 220ms ease;
+}
+.featured-product-detail:hover {
+  transform: translateY(-2px);
+  background: var(--agri-forest);
+  color: #fff;
+}
+.featured-product-detail:hover b {
+  transform: translate(2px, -2px);
+}
+.featured-products-supporting {
+  padding-left: 7.5%;
+}
+.featured-product-supporting {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.72fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 54px 0;
+  border-bottom: 1px solid var(--agri-rule);
+}
+.featured-product-supporting:last-child {
+  border-bottom: 0;
+}
+.featured-product-supporting-image {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #e8ece4;
+}
+.featured-product-supporting-image span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+.featured-product-supporting-copy h3 {
+  margin-top: 8px;
+  font-size: clamp(1.5rem, 2.2vw, 2.15rem);
+  line-height: 1.05;
+}
+.featured-product-supporting-copy p {
+  margin: 11px 0 20px;
+  color: var(--agri-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .featured-products {
+    padding: 88px 0 96px;
+  }
+  .featured-products-layout {
+    grid-template-columns: 1fr;
+  }
+  .featured-product-main {
+    padding-right: 0;
+    padding-bottom: 54px;
+    border-right: 0;
+    border-bottom: 1px solid var(--agri-rule);
+  }
+  .featured-products-supporting {
+    padding-left: 0;
+  }
+}
+@media (max-width: 620px) {
+  .featured-products {
+    padding: 72px 0 78px;
+  }
+  .featured-products-heading {
+    display: block;
+    padding-bottom: 30px;
+  }
+  .featured-products-heading h2 {
+    font-size: clamp(2.3rem, 13vw, 3.7rem);
+  }
+  .featured-products-catalog-link {
+    width: 100%;
+    margin-top: 28px;
+  }
+  .featured-product-main {
+    padding-top: 32px;
+    padding-bottom: 38px;
+  }
+  .featured-product-supporting {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 18px;
+    padding: 34px 0;
+  }
+  .featured-product-supporting-copy p {
+    display: none;
+  }
+  .featured-product-main-copy p {
+    font-size: 0.9rem;
+  }
+  .featured-product-detail {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-products-catalog-link,
+  .featured-products-catalog-link b,
+  .featured-product-image img,
+  .featured-product-supporting-image img,
+  .featured-product-detail,
+  .featured-product-detail b {
+    transition: none;
+  }
+}
