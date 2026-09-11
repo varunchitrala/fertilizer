@@ -3,47 +3,42 @@ import "./ProductsHero.css";
 
 function ProductsHero() {
   return (
-    <section className="products-hero">
-      <div className="products-hero-glow" />
-      <div className="products-hero-grid" />
-
+    <section className="products-hero" aria-labelledby="products-hero-title">
       <div className="container products-hero-inner">
-        <ScrollReveal distance={35}>
-          <div className="products-hero-copy">
-            <span className="products-eyebrow">Agripex / Products</span>
-            <h1>
-              Solutions built for <em>better crops.</em>
-            </h1>
-            <p>
-              Explore our range of fertilizers, crop nutrition products, and
-              agricultural solutions created around practical farming needs.
-            </p>
+        <ScrollReveal className="products-hero-copy" distance={35}>
+          <span className="products-eyebrow">Agripex / Product range</span>
+          <h1 id="products-hero-title">
+            Agricultural inputs for <em>practical crop needs.</em>
+          </h1>
+          <p>
+            Explore the Agripex product range across fertilizers, crop nutrition,
+            and agricultural inputs — presented clearly so you can find the
+            product relevant to your crop and requirement.
+          </p>
+          <div className="products-hero-meta" aria-label="Product range summary">
+            <div>
+              <strong>25+</strong>
+              <span>Products in range</span>
+            </div>
+            <div>
+              <strong>N · P · K</strong>
+              <span>Core crop nutrients</span>
+            </div>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="products-hero-visual" distance={25} delay={120}>
-          <div className="hero-orbit hero-orbit-one" />
-          <div className="hero-orbit hero-orbit-two" />
-          <div className="hero-leaf hero-leaf-one" />
-          <div className="hero-leaf hero-leaf-two" />
-
-          <div className="hero-product-card">
-            <div className="hero-card-top">
+        <ScrollReveal className="products-hero-visual" distance={45} delay={120}>
+          <div className="products-hero-image-wrap">
+            <img
+              src="/coursel-main.jpg"
+              alt="Agricultural field and crop cultivation"
+            />
+            <div className="products-hero-image-caption">
               <span>AGRIPEX</span>
-              <span className="hero-card-dot" />
-            </div>
-            <div className="hero-formula">N · P · K</div>
-            <div className="hero-card-title">Crop Nutrition</div>
-            <div className="hero-card-line" />
-            <div className="hero-card-stats">
-              <div><strong>25+</strong><span>Solutions</span></div>
-              <div><strong>3</strong><span>Key nutrients</span></div>
-              <div><strong>360°</strong><span>Crop care</span></div>
+              <span>Agricultural solutions</span>
             </div>
           </div>
-
-          <div className="hero-float-tag hero-tag-one">Balanced Nutrition</div>
-          <div className="hero-float-tag hero-tag-two">Precision · Growth</div>
+          <div className="products-hero-index" aria-hidden="true">01</div>
         </ScrollReveal>
       </div>
     </section>
