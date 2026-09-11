@@ -101,7 +101,7 @@
 .brand-copy h1 {
   margin: 0;
   color: var(--green-950);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: sans-serif, 'inter';
   font-size: clamp(25px, 2.35vw, 36px);
   font-weight: 700;
   line-height: 1.15;
