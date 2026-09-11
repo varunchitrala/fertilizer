@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
 import Solutions from "./components/Solutions/Solutions";
+import WhyChoose from "./components/WhyChoose/WhyChoose";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
 import "./home-products-preview.css";
@@ -14,6 +15,7 @@ function Home() {
         <Hero />
         <AboutPreview />
         <Solutions />
+        <WhyChoose />
         <section className="home-products-preview" id="products" aria-labelledby="home-products-title">
           <div className="header-container">
             <div className="home-products-preview-heading">
