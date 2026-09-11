@@ -34,7 +34,7 @@ function FeaturedProducts() {
     <section className="featured-products" aria-labelledby="featured-products-title">
       <div className="header-container featured-products-container">
         <ScrollReveal className="featured-products-heading" distance="up">
-          <div className="featured-products-heading-copy">
+          <div>
             <span className="featured-products-kicker">Our products</span>
             <h2 id="featured-products-title">
               Explore our
@@ -44,8 +44,8 @@ function FeaturedProducts() {
           </div>
           <div className="featured-products-heading-side">
             <p>
-              A selection from the AGRIPEX range, with product information available
-              across the full catalogue.
+              Discover a selection from the AGRIPEX range, presented with clear
+              product information and a direct path to the full catalogue.
             </p>
             <Link className="featured-products-catalog-link" to="/products">
               <span>View all products</span>
@@ -58,50 +58,40 @@ function FeaturedProducts() {
           {products.map((product, index) => (
             <ScrollReveal
               key={product.name}
-              className="featured-product-card-wrap"
+              className="featured-product-card"
               distance="up"
               delay={index * 90}
             >
-              <article className="featured-product-card">
-                <Link
-                  to="/products"
-                  className="featured-product-card-image-link"
-                  aria-label={`View ${product.name} details`}
-                >
-                  <div className="featured-product-card-image">
-                    <img
-                      src={product.image}
-                      alt={`${product.name} fertilizer product`}
-                      loading="lazy"
-                    />
-                    <span className="featured-product-card-number">{product.number}</span>
-                  </div>
-                </Link>
-
-                <div className="featured-product-card-content">
-                  <div className="featured-product-card-meta">
-                    <span>{product.number}</span>
-                    <span>{product.category}</span>
-                  </div>
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
-                  <Link className="featured-product-card-cta" to="/products">
-                    <span>View product</span>
-                    <b aria-hidden="true">↗</b>
-                  </Link>
+              <Link
+                to="/products"
+                className="featured-product-image-link"
+                aria-label={`View ${product.name} details`}
+              >
+                <div className="featured-product-image">
+                  <img
+                    src={product.image}
+                    alt={`${product.name} fertilizer product`}
+                    loading="lazy"
+                  />
+                  <span>{product.number}</span>
                 </div>
-              </article>
+              </Link>
+
+              <div className="featured-product-card-body">
+                <div className="featured-product-card-meta">
+                  <span>{product.number}</span>
+                  <span>{product.category}</span>
+                </div>
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <Link className="featured-product-card-cta" to="/products">
+                  <span>View product</span>
+                  <b aria-hidden="true">↗</b>
+                </Link>
+              </div>
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal className="featured-products-footer" delay={180} distance="up">
-          <span>Selected products from the AGRIPEX agricultural range</span>
-          <Link className="featured-products-footer-link" to="/products">
-            <span>Explore full catalogue</span>
-            <b aria-hidden="true">↗</b>
-          </Link>
-        </ScrollReveal>
       </div>
     </section>
   );
