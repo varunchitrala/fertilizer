@@ -1,5 +1,5 @@
-import "./AboutStory.css";
 import ScrollReveal from "../../../../components/ScrollReveal";
+import "./AboutStory.css";
 
 function AboutStory() {
   return (
@@ -10,26 +10,32 @@ function AboutStory() {
           <p>Our story</p>
         </div>
 
-        <ScrollReveal className="about-story-copy" distance={35}>
-          <span className="about-kicker">Experience shaped by the field</span>
+        <ScrollReveal className="about-story-main" distance={35}>
+          <span className="about-kicker">Built around agriculture</span>
           <h2>
-            A trusted partner for the <em>modern field.</em>
+            Agriculture is our focus. <em>Dependability is our promise.</em>
           </h2>
-          <p>
-            Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd. serves the
-            agriculture sector with pesticides, fertilizers, and agricultural
-            chemicals designed around real farming needs.
+          <p className="about-story-lead">
+            Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd. works within the
+            agricultural sector, bringing together pesticides, fertilizers, and
+            agricultural chemicals to serve practical farming needs.
           </p>
           <p>
-            From crop protection to soil and crop nutrition, our focus is on
-            reliable products, practical guidance, and long-term trust with
-            farmers, retailers, and distributors.
+            Our work is grounded in the needs of the field — supporting farmers,
+            retailers, and distributors with agricultural products and solutions
+            designed for everyday crop and cultivation requirements.
           </p>
         </ScrollReveal>
 
-        <ScrollReveal className="about-story-image" distance={45} delay={120}>
-          <img src="/coursel-main.jpg" alt="Agricultural field" />
-          <span>AGRICULTURE / FIELD PARTNERSHIP</span>
+        <ScrollReveal className="about-story-visual" distance={45} delay={120}>
+          <div className="about-story-image">
+            <img src="/coursel-main.jpg" alt="Agricultural field" />
+            <span>AGRIPEX / AGRICULTURAL FOCUS</span>
+          </div>
+          <div className="about-story-detail">
+            <span>OUR APPROACH</span>
+            <strong>Practical agricultural solutions, built around real field needs.</strong>
+          </div>
         </ScrollReveal>
       </div>
     </section>
