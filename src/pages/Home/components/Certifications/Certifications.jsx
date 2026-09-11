@@ -30,10 +30,10 @@ function Certifications() {
           </p>
         </ScrollReveal>
 
-        <div className="certifications-grid">
-          {certifications.map((certification, index) => (
-            <ScrollReveal key={certification.number} delay={index * 70} distance="up">
-              <article className="certification-item">
+        <div className="certifications-carousel" aria-label="Certifications carousel">
+          <div className="certifications-track">
+            {[...certifications, ...certifications].map((certification, index) => (
+              <article className="certification-item" key={`${certification.number}-${index}`}>
                 <div className="certification-paper">
                   <span className="certification-paper-number">{certification.number}</span>
                   <span className="certification-seal" aria-hidden="true">CERT</span>
@@ -45,8 +45,8 @@ function Certifications() {
                   <strong>{certification.title}</strong>
                 </div>
               </article>
-            </ScrollReveal>
-          ))}
+            ))}
+          </div>
         </div>
 
         <ScrollReveal className="certifications-note" delay={280} distance="up">
