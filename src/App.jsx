@@ -3,6 +3,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Products from './pages/Products/Products'
 import GalleryPage from './pages/Gallery/GalleryPage'
+import ContactPage from './pages/Contact/ContactPage'
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;
