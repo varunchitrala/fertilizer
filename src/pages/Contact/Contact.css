@@ -12,7 +12,7 @@
 }
 .contact-hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -140,7 +140,7 @@
 }
 .contact-hero-copy > p {
   max-width: 610px;
-  margin: 42px 0 0;
+  margin: 80px 0 0;
   color: #c4cec7;
   font:
     400 15px/1.85 "DM Sans",
