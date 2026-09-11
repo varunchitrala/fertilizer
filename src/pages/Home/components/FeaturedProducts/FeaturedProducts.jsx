@@ -32,47 +32,68 @@ const supportingProducts = [
 
 function FeaturedProducts() {
   return (
-    <section className="featured-products" aria-labelledby="featured-products-title">
+    <section
+      className="featured-products"
+      aria-labelledby="featured-products-title"
+    >
       <div className="header-container featured-products-container">
         <ScrollReveal className="featured-products-heading" distance="up">
           <div className="featured-products-heading-copy">
-            <span className="featured-products-kicker">Featured product</span>
-            <h2 id="featured-products-title">One product in focus.</h2>
+            <span className="featured-products-kicker">
+              <i /> AGRIPEX product shelf
+            </span>
+            <h2 id="featured-products-title">
+              Inputs built for
+              <br />
+              <em>the next crop.</em>
+            </h2>
           </div>
-          <p className="featured-products-intro">
-            Calcium Nitrate takes the lead, while selected products from the wider
-            AGRIPEX range remain available to explore.
-          </p>
+          <div className="featured-products-intro-wrap">
+            <p className="featured-products-intro">
+              A focused selection of soluble fertilizers and micronutrients for
+              practical crop nutrition.
+            </p>
+            <span className="featured-products-heading-index">
+              01 <b>/</b> 03 products
+            </span>
+          </div>
         </ScrollReveal>
 
-        <div className="featured-products-spotlight">
+        <div className="featured-products-shelf">
           <ScrollReveal className="featured-products-primary" distance="left">
+            <div className="featured-products-primary-topline">
+              <span>01 / Lead formulation</span>
+              <span className="featured-products-primary-badge">
+                Featured range
+              </span>
+            </div>
             <div className="featured-products-primary-image-wrap">
               <img
                 src={featuredProduct.image}
                 alt="Calcium Nitrate fertilizer product"
                 loading="lazy"
               />
-              <div className="featured-products-primary-badge">Featured</div>
               <span className="featured-products-primary-index">
                 {featuredProduct.number}
               </span>
             </div>
-
             <div className="featured-products-primary-copy">
-              <div className="featured-products-primary-meta">
-                <span>{featuredProduct.category}</span>
-                <span>01 / Featured product</span>
+              <div>
+                <span className="featured-product-category">
+                  {featuredProduct.category}
+                </span>
+                <h3>{featuredProduct.name}</h3>
               </div>
-              <h3>{featuredProduct.name}</h3>
-              <p>{featuredProduct.description}</p>
-              <Link
-                className="featured-product-detail featured-product-primary-cta"
-                to="/products"
-              >
-                <span>View product details</span>
-                <b aria-hidden="true">↗</b>
-              </Link>
+              <div className="featured-products-primary-detail">
+                <p>{featuredProduct.description}</p>
+                <Link
+                  className="featured-product-detail featured-product-primary-cta"
+                  to="/products"
+                >
+                  <span>Explore product</span>
+                  <b aria-hidden="true">↗</b>
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -82,11 +103,11 @@ function FeaturedProducts() {
               distance="right"
             >
               <div>
-                <span>Selected range</span>
-                <strong>Other products</strong>
+                <span>02—03 / Supporting range</span>
+                <strong>More crop solutions</strong>
               </div>
               <Link className="featured-products-catalog-link" to="/products">
-                <span>View all products</span>
+                <span>Full catalogue</span>
                 <b aria-hidden="true">↗</b>
               </Link>
             </ScrollReveal>
@@ -107,7 +128,9 @@ function FeaturedProducts() {
                   <span>{product.number}</span>
                 </div>
                 <div className="featured-product-supporting-copy">
-                  <span className="featured-product-category">{product.category}</span>
+                  <span className="featured-product-category">
+                    {product.category}
+                  </span>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <Link className="featured-product-detail" to="/products">
