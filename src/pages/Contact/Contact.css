@@ -1,0 +1,104 @@
+.contact-page{--contact-green:#102f1d;--contact-deep:#071a10;--contact-ink:#183c25;--contact-gold:#c5a15a;--contact-muted:#728079;--contact-line:#dce4dc;position:relative;overflow:hidden;background:#f7f9f3;color:var(--contact-ink)}
+.contact-hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 78% 24%,rgba(197,161,90,.16),transparent 23%),radial-gradient(circle at 18% 70%,rgba(74,120,83,.12),transparent 28%),var(--contact-green);color:#fff}
+.contact-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,26,16,.08),transparent 50%,rgba(7,26,16,.25)),repeating-linear-gradient(90deg,transparent 0,transparent calc(12.5% - 1px),rgba(255,255,255,.045) 12.5%);pointer-events:none}
+.contact-hero-noise{position:absolute;inset:0;opacity:.08;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+.contact-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(90deg,transparent,black 18%,black 82%,transparent);opacity:.45}
+.contact-hero-orbit{position:absolute;border:1px solid rgba(197,161,90,.24);border-radius:50%;animation:contactOrbit 18s linear infinite}
+.contact-hero-orbit-one{width:52vw;height:52vw;right:-17vw;top:-10vw;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
+.contact-hero-orbit-two{width:30vw;height:30vw;right:-7vw;top:4vw;animation-direction:reverse;animation-duration:26s}
+.contact-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:60px;align-items:end;padding:160px 0 95px}
+.contact-hero-copy{max-width:980px}
+.contact-breadcrumb{display:flex;align-items:center;gap:13px;margin-bottom:35px;color:#bcc8bf;font:700 10px "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.contact-breadcrumb span{color:var(--contact-gold)}
+.contact-breadcrumb i{display:block;width:30px;height:1px;background:rgba(255,255,255,.34)}
+.contact-hero h1{margin:0;max-width:1000px;font:800 clamp(58px,9.6vw,145px)/.86 "Manrope",sans-serif;letter-spacing:-.078em}
+.contact-hero h1 em{color:#d9c18d;font-style:normal}
+.contact-hero-copy>p{max-width:610px;margin:42px 0 0;color:#c4cec7;font:400 15px/1.85 "DM Sans",sans-serif}
+.contact-scroll-cue{display:flex;align-items:center;gap:12px;margin-top:44px;color:#8fa097;font:700 9px "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.contact-scroll-cue span{display:block;width:40px;height:1px;background:var(--contact-gold);transform-origin:left;animation:contactPulse 2s ease-in-out infinite}
+.contact-hero-side{display:flex;flex-direction:column;align-items:flex-end;gap:28px;padding-bottom:7px;text-align:right}
+.contact-hero-coordinate{color:#c9af73;font:700 9px/1.6 "DM Sans",sans-serif;letter-spacing:.16em}
+.contact-hero-side-copy{max-width:190px;color:#afbab3;font:400 12px/1.8 "DM Sans",sans-serif}
+.contact-hero-ring{display:grid;width:102px;height:102px;place-items:center;border:1px solid rgba(197,161,90,.45);border-radius:50%;color:#fff;animation:contactFloat 5s ease-in-out infinite}
+.contact-hero-ring span{font:800 9px "DM Sans",sans-serif;letter-spacing:.2em}
+.contact-hero-ring b{position:absolute;margin:70px 0 0 70px;display:grid;width:26px;height:26px;place-items:center;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:#0f3020;font-size:12px;font-weight:500}
+.contact-intro-section{padding:150px 0 140px;background:#f7f9f3}
+.contact-intro-grid{display:grid;grid-template-columns:190px 1fr;gap:80px}
+.contact-section-marker{display:flex;align-items:flex-start;gap:13px;color:var(--contact-gold);font:700 10px "DM Sans",sans-serif;letter-spacing:.16em}
+.contact-section-marker span{padding-top:3px}
+.contact-section-marker i{display:block;width:34px;height:1px;margin-top:8px;background:var(--contact-gold)}
+.contact-section-marker small{padding-top:1px;color:#829087;text-transform:uppercase}
+.contact-intro-copy{max-width:900px}
+.contact-kicker{display:block;color:#7f8b83;font:700 10px "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.contact-intro-copy h2,.contact-form-heading h2,.contact-channel-heading h2,.contact-closing h2{margin:15px 0 0;color:var(--contact-green);font:800 clamp(47px,6.2vw,88px)/.93 "Manrope",sans-serif;letter-spacing:-.07em}
+.contact-intro-copy h2 em,.contact-form-heading h2 em,.contact-channel-heading h2 em,.contact-closing h2 em{font-style:normal;color:#8b9a90}
+.contact-intro-copy p{max-width:620px;margin:35px 0 0;color:#65736b;font:400 15px/2 "DM Sans",sans-serif}
+.contact-form-section{padding:130px 0 150px;background:#eef2eb}
+.contact-form-layout{display:grid;grid-template-columns:.75fr 1.35fr;gap:90px;align-items:start}
+.contact-form-heading{position:sticky;top:130px}
+.contact-form-heading>p{max-width:290px;margin:32px 0 0;color:#758279;font:400 13px/1.8 "DM Sans",sans-serif}
+.contact-form-meta{display:grid;gap:7px;margin-top:45px;padding-top:20px;border-top:1px solid #d5ddd4;max-width:290px}
+.contact-form-meta span{color:#8b978f;font:700 9px "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.contact-form-meta strong{color:var(--contact-green);font:700 12px "DM Sans",sans-serif}
+.contact-form-card{position:relative;padding:38px 40px 42px;border:1px solid #d6dfd7;background:#fbfcf9;box-shadow:0 30px 70px rgba(17,49,29,.07);overflow:hidden}
+.contact-form-card::before{content:"";position:absolute;top:0;left:0;width:94px;height:3px;background:var(--contact-gold)}
+.contact-form-topline{display:flex;justify-content:space-between;padding-bottom:22px;margin-bottom:6px;border-bottom:1px solid #dce3dc;color:#87938b;font:700 9px "DM Sans",sans-serif;letter-spacing:.17em}
+.contact-field-row{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.contact-form-card label{position:relative;display:grid;gap:10px;padding:25px 0 14px;border-bottom:1px solid #ccd6cd}
+.contact-form-card label span{color:#7c8981;font:700 8px "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:color .25s ease}
+.contact-form-card label::after{content:"";position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:var(--contact-green);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.contact-form-card label.is-active::after,.contact-form-card label:focus-within::after{transform:scaleX(1);transform-origin:left}
+.contact-form-card label.is-active span,.contact-form-card label:focus-within span{color:#a07d3a}
+.contact-form-card input,.contact-form-card select,.contact-form-card textarea{width:100%;border:0;outline:0;background:transparent;color:#173b24;font:600 14px "DM Sans",sans-serif;resize:vertical}
+.contact-form-card input::placeholder,.contact-form-card textarea::placeholder{color:#a8b1aa;font-weight:400}
+.contact-form-card select{appearance:none;padding-right:28px;background-image:linear-gradient(45deg,transparent 50%,#8f9b92 50%),linear-gradient(135deg,#8f9b92 50%,transparent 50%);background-position:calc(100% - 10px) 55%,calc(100% - 5px) 55%;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+.contact-form-footer{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-top:34px}
+.contact-form-footer>span{max-width:250px;color:#8b968e;font:400 10px/1.7 "DM Sans",sans-serif}
+.contact-form-footer button,.contact-closing-link{display:inline-flex;align-items:center;gap:20px;padding:13px 0 11px;border:0;border-bottom:1px solid #b79248;background:transparent;color:#183c25;font:800 10px "DM Sans",sans-serif;letter-spacing:.15em;text-transform:uppercase;cursor:pointer}
+.contact-form-footer button b,.contact-closing-link b{display:grid;width:35px;height:35px;place-items:center;border:1px solid #c8a45e;border-radius:50%;font-size:14px;font-weight:500;transition:all .35s ease}
+.contact-form-footer button:hover,.contact-closing-link:hover{gap:26px}
+.contact-form-footer button:hover b,.contact-closing-link:hover b{transform:translate(3px,-3px);background:var(--contact-gold);color:#fff}
+.contact-success{padding:40px 10px 22px}
+.contact-success-mark{display:grid;width:48px;height:48px;place-items:center;border:1px solid #c9a55f;border-radius:50%;color:#9a7839;font-size:20px}
+.contact-success h3{margin:24px 0 0;color:var(--contact-green);font:800 clamp(40px,4vw,62px)/.95 "Manrope",sans-serif;letter-spacing:-.06em}
+.contact-success h3 em{font-style:normal;color:#87968c}
+.contact-success p{max-width:540px;margin:23px 0 0;color:#6f7c74;font:400 13px/1.9 "DM Sans",sans-serif}
+.contact-success-links{display:flex;gap:25px;margin-top:35px}
+.contact-success-links a{color:#183c25;font:800 9px "DM Sans",sans-serif;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}
+.contact-channels-section{padding:145px 0 155px;background:#f7f9f3}
+.contact-channel-heading{display:flex;justify-content:space-between;align-items:end;gap:50px;padding-bottom:50px;border-bottom:1px solid #dbe2db}
+.contact-channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:1px;background:#dbe2db;border:1px solid #dbe2db}
+.contact-channel{position:relative;min-height:340px;padding:33px 32px 36px;background:#f7f9f3;text-decoration:none;overflow:hidden;transition:transform .55s cubic-bezier(.2,.7,.2,1),background .4s ease,color .4s ease}
+.contact-channel::before{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--contact-gold);transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.contact-channel:hover{transform:translateY(-10px);background:#eef3ec}
+.contact-channel:hover::before{transform:scaleX(1);transform-origin:left}
+.contact-channel-top{display:flex;justify-content:space-between;color:#a88647;font:700 9px "DM Sans",sans-serif;letter-spacing:.18em}
+.contact-channel-top i{display:grid;width:33px;height:33px;place-items:center;border:1px solid #d0bb89;border-radius:50%;font-size:13px;font-style:normal;transition:transform .35s ease,background .35s ease,color .35s ease}
+.contact-channel:hover .contact-channel-top i{transform:translate(3px,-3px);background:#c5a15a;color:#fff}
+.contact-channel-label{display:block;margin-top:60px;color:#7e8a82;font:700 9px "DM Sans",sans-serif;letter-spacing:.17em}
+.contact-channel h3{max-width:360px;margin:11px 0 0;color:var(--contact-green);font:800 clamp(24px,2.15vw,33px)/1.05 "Manrope",sans-serif;letter-spacing:-.045em;overflow-wrap:anywhere}
+.contact-channel p{max-width:320px;margin:22px 0 0;color:#758279;font:400 12px/1.8 "DM Sans",sans-serif}
+.contact-channel-line{position:absolute;bottom:27px;left:32px;width:45px;height:1px;background:#c9a760;transition:width .4s ease}
+.contact-channel:hover .contact-channel-line{width:90px}
+.contact-closing{position:relative;min-height:610px;display:grid;place-items:center;overflow:hidden;background:var(--contact-green);color:#fff}
+.contact-closing-inner{position:relative;z-index:2;text-align:center;padding:130px 0}
+.contact-closing h2{max-width:1000px;margin:18px auto 0;color:#fff;font-size:clamp(50px,7vw,105px)}
+.contact-closing h2 em{color:#cdb47b}
+.contact-closing-link{margin-top:48px;color:#fff;border-bottom-color:#c7a45e}
+.contact-closing-line{position:absolute;height:1px;width:75%;left:12.5%;background:rgba(255,255,255,.09)}
+.contact-closing-line-one{top:27%}.contact-closing-line-two{top:73%}
+.contact-closing::before,.contact-closing::after{content:"";position:absolute;width:500px;height:500px;border:1px solid rgba(197,161,90,.14);border-radius:50%;animation:contactOrbit 22s linear infinite}
+.contact-closing::before{left:-260px;top:-200px}.contact-closing::after{right:-260px;bottom:-260px;animation-direction:reverse}
+
+@keyframes contactOrbit{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes contactFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes contactPulse{0%,100%{transform:scaleX(.65);opacity:.45}50%{transform:scaleX(1);opacity:1}}
+
+@media (max-width:900px){
+ .contact-hero-inner,.contact-form-layout,.contact-intro-grid{grid-template-columns:1fr;gap:45px}
+ .contact-hero-side{display:none}.contact-hero-inner{padding:140px 0 85px}.contact-form-heading{position:static}.contact-channel-grid{grid-template-columns:1fr}.contact-channel{min-height:290px}.contact-channel-heading{align-items:start;flex-direction:column}.contact-intro-section,.contact-form-section,.contact-channels-section{padding:100px 0 105px}
+}
+@media (max-width:620px){
+ .contact-hero{min-height:780px}.contact-hero-inner{padding:125px 0 70px}.contact-hero h1{font-size:clamp(48px,15vw,78px)}.contact-hero-copy>p{margin-top:30px;font-size:14px}.contact-intro-grid{gap:25px}.contact-section-marker{margin-bottom:4px}.contact-intro-copy h2,.contact-form-heading h2,.contact-channel-heading h2,.contact-closing h2{font-size:clamp(41px,12vw,62px)}.contact-form-card{padding:26px 21px 28px}.contact-field-row{grid-template-columns:1fr;gap:0}.contact-form-footer{align-items:flex-start;flex-direction:column}.contact-success-links{flex-direction:column;gap:13px}.contact-closing{min-height:500px}.contact-closing-inner{padding:90px 0}.contact-channel{padding:27px 24px 32px}.contact-channel-label{margin-top:48px}.contact-channel-line{left:24px}
+}
+@media (prefers-reduced-motion:reduce){.contact-hero-orbit,.contact-hero-ring,.contact-scroll-cue span,.contact-closing::before,.contact-closing::after{animation:none}.contact-channel,.contact-form-footer button,.contact-closing-link{transition:none}}
