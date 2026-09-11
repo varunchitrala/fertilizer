@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import AboutPreview from "./components/AboutPreview/AboutPreview";
 import Solutions from "./components/Solutions/Solutions";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
@@ -11,6 +12,7 @@ function Home() {
       <Header />
       <main>
         <Hero />
+        <AboutPreview />
         <Solutions />
         <section className="home-products-preview" id="products" aria-labelledby="home-products-title">
           <div className="header-container">
