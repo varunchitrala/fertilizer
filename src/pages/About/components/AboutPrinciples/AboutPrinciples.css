@@ -1,14 +1,15 @@
 .about-principles {
-  padding: 120px 0 110px;
+  padding: 40px 0 40px;
   background: #103d22;
   color: #fffdf7;
+  padding-left: 20px;
 }
 
 .about-principles-intro {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr);
-  gap: 64px;
-  margin-bottom: 72px;
+  gap: 30px;
+  margin-bottom: 10px;
 }
 
 .about-section-label-light { color: rgba(255, 255, 255, 0.62); }
@@ -21,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 10px;
 }
 
 .about-eyebrow-light { color: rgba(255, 255, 255, 0.72); }
@@ -29,7 +30,7 @@
 
 .about-principles-index {
   color: rgba(255, 255, 255, 0.38);
-  font: 700 9px "DM Sans", Inter, sans-serif;
+  font: 100 9px "DM Sans", Inter, sans-serif;
   letter-spacing: 0.16em;
 }
 
@@ -56,7 +57,7 @@
   grid-template-columns: 100px minmax(0, 1fr) 50px;
   gap: 42px;
   align-items: start;
-  padding: 42px 0 46px;
+  padding: 20px 0 46px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 

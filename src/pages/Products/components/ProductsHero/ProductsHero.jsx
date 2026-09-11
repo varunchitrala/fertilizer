@@ -30,7 +30,7 @@ function ProductsHero() {
         <ScrollReveal className="products-hero-visual" distance={45} delay={120}>
           <div className="products-hero-image-wrap">
             <img
-              src="/coursel-main.jpg"
+              src="/pest.jpg"
               alt="Agricultural field and crop cultivation"
             />
             <div className="products-hero-image-caption">
@@ -38,7 +38,6 @@ function ProductsHero() {
               <span>Agricultural solutions</span>
             </div>
           </div>
-          <div className="products-hero-index" aria-hidden="true">01</div>
         </ScrollReveal>
       </div>
     </section>

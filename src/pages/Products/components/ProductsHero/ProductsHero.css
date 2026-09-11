@@ -6,6 +6,7 @@
   align-items: center;
   background: var(--agri-forest-deep);
   color: #fff;
+  padding-left: 20px;
 }
 
 .products-hero::before {

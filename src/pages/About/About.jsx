@@ -6,7 +6,6 @@ import AboutStory from "./components/AboutStory/AboutStory";
 import AboutPrinciples from "./components/AboutPrinciples/AboutPrinciples";
 import AboutSolutions from "./components/AboutSolutions/AboutSolutions";
 import AboutMission from "./components/AboutMission/AboutMission";
-import AboutClosing from "./components/AboutClosing/AboutClosing";
 
 function About() {
   return (
@@ -19,7 +18,6 @@ function About() {
           <AboutPrinciples />
           <AboutSolutions />
           <AboutMission />
-          <AboutClosing />
         </main>
       </div>
       <Footer />

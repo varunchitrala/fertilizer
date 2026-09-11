@@ -29,7 +29,7 @@ function AboutStory() {
 
         <ScrollReveal className="about-story-visual" distance={45} delay={120}>
           <div className="about-story-image">
-            <img src="/coursel-main.jpg" alt="Agricultural field" />
+            <img src="/ff.jpg" alt="Agricultural field" />
             <span>AGRIPEX / AGRICULTURAL FOCUS</span>
           </div>
           <div className="about-story-detail">
