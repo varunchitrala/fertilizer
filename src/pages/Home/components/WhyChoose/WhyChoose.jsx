@@ -42,9 +42,7 @@ function WhyChoose() {
               <Link to="/products" className="why-choose-primary-cta"><span>Explore products</span><b aria-hidden="true">→</b></Link>
             </ScrollReveal>
 
-            <ScrollReveal className="why-choose-action" delay={300} distance="up">
-              <Link to="/about" className="why-choose-secondary-cta"><span>Learn why AGRIPEX</span><b aria-hidden="true">→</b></Link>
-            </ScrollReveal>
+            
           </div>
         </div>
       </div>
