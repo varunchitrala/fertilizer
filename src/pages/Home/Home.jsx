@@ -1,7 +1,6 @@
 import Header from "../../components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
-import Solutions from "./components/Solutions/Solutions";
 import WhyChoose from "./components/WhyChoose/WhyChoose";
 import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
 import Certifications from "./components/Certifications/Certifications";
@@ -15,7 +14,6 @@ function Home() {
       <main>
         <Hero />
         <AboutPreview />
-        <Solutions />
         <WhyChoose />
         <FeaturedProducts />
         <Certifications />
