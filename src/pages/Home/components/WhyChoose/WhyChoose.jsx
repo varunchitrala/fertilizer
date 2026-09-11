@@ -62,7 +62,7 @@ function WhyChoose() {
 
           <div className="why-choose-list">
             {reasons.map((reason, index) => (
-              <ScrollReveal key={reason.number} delay={index * 80} distance="right">
+              <ScrollReveal key={reason.number} delay={index * 60} distance="right">
                 <article className="why-choose-item">
                   <span className="why-choose-number">{reason.number}</span>
                   <div>
@@ -73,7 +73,19 @@ function WhyChoose() {
               </ScrollReveal>
             ))}
 
-            <ScrollReveal className="why-choose-action" delay={320} distance="up">
+            <ScrollReveal className="why-choose-proof" delay={240} distance="up">
+              <div>
+                <strong>25+</strong>
+                <span>products in our agricultural range</span>
+              </div>
+              <span className="why-choose-proof-rule" aria-hidden="true" />
+              <Link to="/products" className="why-choose-proof-link">
+                <span>Explore products</span>
+                <b aria-hidden="true">→</b>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal className="why-choose-action" delay={300} distance="up">
               <Link to="/about" className="why-choose-link" aria-label="Why AGRIPEX, learn more on the About page">
                 <span>Why AGRIPEX</span>
                 <b aria-hidden="true">→</b>
