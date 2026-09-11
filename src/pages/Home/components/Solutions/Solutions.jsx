@@ -35,7 +35,7 @@ function Solutions() {
       <div className="header-container solutions-container">
         <ScrollReveal className="solutions-intro" distance="up">
           <div className="solutions-kicker">
-            <span /> Our Range
+            <span /> What We Offer
           </div>
 
           <div className="solutions-heading-wrap">
