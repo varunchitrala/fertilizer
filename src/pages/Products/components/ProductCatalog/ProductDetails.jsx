@@ -45,16 +45,34 @@ function ProductDetails({ product, onClose }) {
 
   return (
     <div className="product-details-overlay" role="presentation">
-      <button className="product-details-backdrop" type="button" aria-label="Close product details" onClick={onClose} />
+      <button
+        className="product-details-backdrop"
+        type="button"
+        aria-label="Close product details"
+        onClick={onClose}
+      />
 
-      <div className="product-details-modal" role="dialog" aria-modal="true" aria-labelledby="product-detail-title">
-        <button ref={closeButtonRef} className="product-details-close" type="button" onClick={onClose} aria-label="Close product details">
+      <div
+        className="product-details-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-detail-title"
+      >
+        <button
+          ref={closeButtonRef}
+          className="product-details-close"
+          type="button"
+          onClick={onClose}
+          aria-label="Close product details"
+        >
           <span />
           <span />
         </button>
 
         <div className="product-details-topline">
-          <span>AGRIPEX / PRODUCT {String(product.index + 1).padStart(2, "0")}</span>
+          <span>
+            AGRIPEX / PRODUCT {String(product.index + 1).padStart(2, "0")}
+          </span>
           <span>Product information</span>
         </div>
 
@@ -64,11 +82,15 @@ function ProductDetails({ product, onClose }) {
               <img src={product.image} alt={`${product.name} product`} />
               <span>AGRIPEX</span>
             </div>
-            {details.form && <div className="product-details-form">{details.form}</div>}
+            {details.form && (
+              <div className="product-details-form">{details.form}</div>
+            )}
           </div>
 
           <div className="product-details-content">
-            <div className="product-details-eyebrow">Agricultural product range</div>
+            <div className="product-details-eyebrow">
+              Agricultural product range
+            </div>
             <h2 id="product-detail-title">{product.name}</h2>
             <p className="product-details-intro">{product.description}</p>
 
@@ -79,29 +101,61 @@ function ProductDetails({ product, onClose }) {
             )}
 
             {features.length > 0 && (
-              <DetailGroup number={details.overview ? "02" : "01"} title="Key features">
+              <DetailGroup
+                number={details.overview ? "02" : "01"}
+                title="Key features"
+              >
                 <div className="product-feature-list">
                   {features.map((feature) => (
-                    <div className="product-feature" key={feature.title || feature.number}>
+                    <div
+                      className="product-feature"
+                      key={feature.title || feature.number}
+                    >
                       <span>{feature.number}</span>
-                      <div><h4>{feature.title}</h4><p>{feature.text}</p></div>
+                      <div>
+                        <h4>{feature.title}</h4>
+                        <p>{feature.text}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
               </DetailGroup>
             )}
 
-            {(application.length > 0 || dosage.length > 0 || crops.length > 0) && (
+            {(application.length > 0 ||
+              dosage.length > 0 ||
+              crops.length > 0) && (
               <DetailGroup number="03" title="Application guide">
                 <div className="product-guide-grid">
                   {application.length > 0 && (
-                    <div className="product-guide-block"><span>Method of application</span><div>{application.map((item) => <b key={item}>{item}</b>)}</div></div>
+                    <div className="product-guide-block">
+                      <span>Method of application</span>
+                      <div>
+                        {application.map((item) => (
+                          <b key={item}>{item}</b>
+                        ))}
+                      </div>
+                    </div>
                   )}
                   {dosage.length > 0 && (
-                    <div className="product-guide-block"><span>Dosage</span><ul>{dosage.map((item) => <li key={item}>{item}</li>)}</ul></div>
+                    <div className="product-guide-block">
+                      <span>Dosage</span>
+                      <ul>
+                        {dosage.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
                   {crops.length > 0 && (
-                    <div className="product-guide-block product-guide-full"><span>Recommended crops</span><div className="product-crops">{crops.map((crop) => <b key={crop}>{crop}</b>)}</div></div>
+                    <div className="product-guide-block product-guide-full">
+                      <span>Recommended crops</span>
+                      <div className="product-crops">
+                        {crops.map((crop) => (
+                          <b key={crop}>{crop}</b>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
               </DetailGroup>
@@ -112,7 +166,8 @@ function ProductDetails({ product, onClose }) {
                 <div className="product-spec-table">
                   {specifications.map((spec) => (
                     <div className="product-spec-row" key={spec.label}>
-                      <span>{spec.label}</span><strong>{spec.value}</strong>
+                      <span>{spec.label}</span>
+                      <strong>{spec.value}</strong>
                     </div>
                   ))}
                 </div>
@@ -122,9 +177,24 @@ function ProductDetails({ product, onClose }) {
             {(details.storage || details.caution || details.manufacturer) && (
               <DetailGroup number="05" title="Additional information">
                 <div className="product-additional-grid">
-                  {details.storage && <div><span>Storage</span><p>{details.storage}</p></div>}
-                  {details.caution && <div><span>Caution</span><p>{details.caution}</p></div>}
-                  {details.manufacturer && <div className="product-additional-full"><span>Manufactured by</span><p>{details.manufacturer}</p></div>}
+                  {details.storage && (
+                    <div>
+                      <span>Storage</span>
+                      <p>{details.storage}</p>
+                    </div>
+                  )}
+                  {details.caution && (
+                    <div>
+                      <span>Caution</span>
+                      <p>{details.caution}</p>
+                    </div>
+                  )}
+                  {details.manufacturer && (
+                    <div className="product-additional-full">
+                      <span>Manufactured by</span>
+                      <p>{details.manufacturer}</p>
+                    </div>
+                  )}
                 </div>
               </DetailGroup>
             )}
@@ -132,7 +202,8 @@ function ProductDetails({ product, onClose }) {
         </div>
 
         <footer className="product-details-footer">
-          <span>AGRIPEX</span><span>For agriculture use only</span>
+          <span>AGRIPEX</span>
+          <span>For agriculture use only</span>
         </footer>
       </div>
     </div>

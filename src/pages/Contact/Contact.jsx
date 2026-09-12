@@ -1,3 +1,5 @@
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import ContactChannels from "./components/ContactChannels/ContactChannels";
 import ContactClosing from "./components/ContactClosing/ContactClosing";
 import ContactForm from "./components/ContactForm/ContactForm";
@@ -6,12 +8,16 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <main className="contact-page">
-      <ContactHero />
-      <ContactForm />
-      <ContactChannels />
-      <ContactClosing />
-    </main>
+    <>
+      <Header />
+      <main className="contact-page">
+        <ContactHero />
+        <ContactForm />
+        <ContactChannels />
+        <ContactClosing />
+      </main>
+      <Footer />
+    </>
   );
 }
 
