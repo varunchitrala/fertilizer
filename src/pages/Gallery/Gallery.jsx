@@ -50,36 +50,55 @@ function Gallery() {
       <div className="gallery-page-container">
         <ScrollReveal>
           <header className="gallery-page-hero">
-            <div className="gallery-page-hero-kicker"><span>03</span><span>AGRIPEx / Visual Archive</span></div>
-            <div className="gallery-page-hero-grid">
-              <div>
-                <p className="gallery-page-overline">FIELD STORIES · CROP CARE · INNOVATION</p>
-                <h1 id="gallery-page-title">Closer to the field.<br /><em>Closer to the future.</em></h1>
+            <div className="gallery-page-hero-topline">
+              <span className="gallery-page-section-index">03</span>
+              <span>AGRIPEX / GALLERY</span>
+            </div>
+
+            <div className="gallery-page-hero-main">
+              <div className="gallery-page-hero-title">
+                <p className="gallery-page-overline">FIELD · FARMING · AGRICULTURE</p>
+                <h1 id="gallery-page-title">
+                  Stories from
+                  <br />
+                  <em>the field.</em>
+                </h1>
+                <p className="gallery-page-hero-intro">
+                  A visual record of the people, crops and agricultural work that shape the Agripex journey.
+                </p>
               </div>
-              <div className="gallery-page-hero-copy">
-                <p>Explore the people, crops, practices and ideas shaping a more productive agricultural future.</p>
-                <div className="gallery-page-hero-rule" />
-                <span>Scroll to explore <b>↓</b></span>
+
+              <div className="gallery-page-hero-feature">
+                <div className="gallery-page-hero-feature-image">
+                  <img src="/farmer-1.jpg" alt="Farmer working in an agricultural field" />
+                  <span className="gallery-page-hero-feature-label">FIELD STORY / 01</span>
+                </div>
+                <div className="gallery-page-hero-feature-meta">
+                  <span>Agripex visual archive</span>
+                  <span>Explore below ↓</span>
+                </div>
               </div>
             </div>
           </header>
         </ScrollReveal>
 
-        <ScrollReveal distance={28} delay={80}>
+        <ScrollReveal distance={24} delay={70}>
           <div className="gallery-page-toolbar" aria-label="Gallery filters">
-            <span className="gallery-page-toolbar-label">Explore archive</span>
+            <span className="gallery-page-toolbar-label">Browse the archive</span>
             <div className="gallery-filter-list">
               {filters.map((filter) => (
-                <button key={filter} type="button" className={activeFilter === filter ? "is-active" : ""} onClick={() => setActiveFilter(filter)}>{filter}</button>
+                <button key={filter} type="button" className={activeFilter === filter ? "is-active" : ""} onClick={() => setActiveFilter(filter)}>
+                  {filter}
+                </button>
               ))}
             </div>
-            <span className="gallery-page-count">{String(visibleItems.length).padStart(2, "0")} visuals</span>
+            <span className="gallery-page-count">{String(visibleItems.length).padStart(2, "0")} images</span>
           </div>
         </ScrollReveal>
 
         <div className={`gallery-page-grid ${visibleItems.length === 1 ? "single-item" : ""}`}>
           {visibleItems.map((item, index) => (
-            <ScrollReveal key={item.image} distance={35} delay={(index % 3) * 45}>
+            <ScrollReveal key={item.image} distance={30} delay={(index % 3) * 45}>
               <button type="button" className={`gallery-page-card ${item.featured ? "is-featured" : ""}`} onClick={() => setActiveImage({ ...item, index })}>
                 <span className="gallery-page-card-image">
                   <img src={item.image} alt={item.title} loading={index > 1 ? "lazy" : "eager"} />
@@ -93,7 +112,7 @@ function Gallery() {
           ))}
         </div>
 
-        <ScrollReveal distance={40}>
+        <ScrollReveal distance={30}>
           <section className="gallery-page-cta" aria-label="Explore products">
             <div><span>From the field to the formulation</span><h2>See what powers<br /><em>better crop outcomes.</em></h2></div>
             <Link to="/products" className="gallery-page-cta-link"><span>Explore products</span><b>↗</b></Link>
