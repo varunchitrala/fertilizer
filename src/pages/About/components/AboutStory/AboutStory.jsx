@@ -4,13 +4,13 @@ import "./AboutStory.css";
 function AboutStory() {
   return (
     <section className="about-story" id="about-story">
-      <div className="container about-story-grid">
+      <div className="container about-story-row">
         <div className="about-section-label">
           <span>01</span>
           <p>Our story</p>
         </div>
-        
-        <ScrollReveal className="about-story-main" distance={35}>
+
+        <ScrollReveal className="about-story-content" distance={35}>
           <span className="about-kicker">Built around agriculture</span>
           <h2>
             Agriculture is our focus. <em>Dependability is our promise.</em>
