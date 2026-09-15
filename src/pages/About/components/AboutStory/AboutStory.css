@@ -1,35 +1,35 @@
 .about-story {
-  padding: 110px 0 120px;
+  padding: 96px 0 112px;
   background: #fbfcf8;
   border-bottom: 1px solid #d8e0d7;
 }
 
 .about-story-column {
-  max-width: 1800px;
+  width: min(980px, calc(100% - 40px));
   margin-inline: auto;
 }
 
 .about-story-heading {
-  max-width: 980px;
+  width: 100%;
 }
 
 .about-section-label {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .about-section-label span {
   color: #b08b45;
   font: 700 10px/1 "DM Sans", Inter, sans-serif;
-  letter-spacing: 0.15em;
+  letter-spacing: .15em;
 }
 
 .about-section-label p {
   color: #718078;
   font: 700 10px/1 "DM Sans", Inter, sans-serif;
-  letter-spacing: 0.17em;
+  letter-spacing: .17em;
   text-transform: uppercase;
 }
 
@@ -38,7 +38,7 @@
   margin-bottom: 14px;
   color: #748178;
   font: 700 11px/1.4 "DM Sans", Inter, sans-serif;
-  letter-spacing: 0.17em;
+  letter-spacing: .17em;
   text-transform: uppercase;
 }
 
@@ -46,8 +46,8 @@
   max-width: 980px;
   margin: 0;
   color: #183b27;
-  font: 800 clamp(46px, 6vw, 84px)/0.98 "Manrope", Inter, sans-serif;
-  letter-spacing: -0.07em;
+  font: 800 clamp(48px, 6vw, 82px)/.96 "Manrope", Inter, sans-serif;
+  letter-spacing: -.07em;
 }
 
 .about-story h2 em {
@@ -56,70 +56,75 @@
 }
 
 .about-story-content {
-  max-width: 900px;
+  width: 100%;
+  max-width: 920px;
   margin-top: 34px;
-  padding-top: 30px;
+  padding-top: 28px;
   border-top: 1px solid #d8e0d7;
 }
 
 .about-story-content p {
-  max-width: 850px;
+  max-width: 860px;
   margin: 0 0 16px;
   color: #596860;
-  font: 16px/1.75 "DM Sans", Inter, sans-serif;
+  font: 16px/1.72 "DM Sans", Inter, sans-serif;
 }
 
 .about-story-content .about-story-lead {
   color: #304b39;
   font-size: 19px;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .about-story-visual {
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 18px;
 }
 
 .about-story-image {
   position: relative;
+  width: 100%;
   overflow: hidden;
-  /* background: #e9eee7; */
   border: 1px solid #d8e0d7;
+  background: #e9eee7;
 }
 
 .about-story-image img {
-  
-  width: 40%;
-  height: 380px;
+  display: block;
+  width: 100%;
+  height: min(48vw, 500px);
+  min-height: 320px;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
 }
 
 .about-story-visual:hover .about-story-image img {
-  transform: scale(1.025);
+  transform: scale(1.02);
 }
 
 .about-story-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 37, 20, 0.01) 45%, rgba(10, 37, 20, 0.48));
+  background: linear-gradient(180deg, rgba(10,37,20,0) 52%, rgba(10,37,20,.48));
   pointer-events: none;
 }
 
-.about-story-image span {
+.about-story-image > span {
   position: absolute;
   z-index: 1;
-  left: 5px;
-  bottom: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  left: 20px;
+  bottom: 18px;
+  color: rgba(255,255,255,.92);
   font: 700 9px/1 "DM Sans", Inter, sans-serif;
-  letter-spacing: 0.14em;
+  letter-spacing: .15em;
+  text-transform: uppercase;
 }
 
 .about-story-detail {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 5px;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 20px;
   padding-top: 18px;
   margin-top: 16px;
   border-top: 1px solid #d8e0d7;
@@ -128,48 +133,54 @@
 .about-story-detail span {
   color: #718078;
   font: 700 9px/1.4 "DM Sans", Inter, sans-serif;
-  letter-spacing: 0.13em;
+  letter-spacing: .13em;
+  text-transform: uppercase;
 }
 
 .about-story-detail strong {
+  max-width: 700px;
   color: #183b27;
   font: 600 15px/1.55 "DM Sans", Inter, sans-serif;
 }
 
-@media (max-width: 900px) {
-  .about-story-column {
-    max-width: 760px;
-  }
-}
-
 @media (max-width: 620px) {
   .about-story {
-    padding: 80px 0 90px;
+    padding: 72px 0 82px;
+  }
+
+  .about-story-column {
+    width: calc(100% - 34px);
   }
 
   .about-section-label {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   .about-story h2 {
-    font-size: clamp(40px, 11vw, 58px);
+    font-size: clamp(42px, 11.5vw, 62px);
   }
 
   .about-story-content {
     margin-top: 28px;
-    padding-top: 24px;
+    padding-top: 23px;
   }
 
   .about-story-content .about-story-lead {
     font-size: 17px;
   }
 
+  .about-story-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
   .about-story-visual {
-    margin-top: 28px;
+    margin-top: 10px;
   }
 
   .about-story-image img {
     height: 300px;
+    min-height: 0;
   }
 
   .about-story-detail {
