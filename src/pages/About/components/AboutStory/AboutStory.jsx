@@ -4,17 +4,19 @@ import "./AboutStory.css";
 function AboutStory() {
   return (
     <section className="about-story" id="about-story">
-      <div className="container about-story-row">
-        <div className="about-section-label">
-          <span>01</span>
-          <p>Our story</p>
-        </div>
-
-        <ScrollReveal className="about-story-content" distance={35}>
+      <div className="container about-story-column">
+        <ScrollReveal className="about-story-heading" distance={35}>
+          <div className="about-section-label">
+            <span>01</span>
+            <p>Our story</p>
+          </div>
           <span className="about-kicker">Built around agriculture</span>
           <h2>
             Agriculture is our focus. <em>Dependability is our promise.</em>
           </h2>
+        </ScrollReveal>
+
+        <ScrollReveal className="about-story-content" distance={35} delay={80}>
           <p className="about-story-lead">
             Agripex Pesticide Fertilizer &amp; Chemical Pvt. Ltd. works within the
             agricultural sector, bringing together pesticides, fertilizers, and
@@ -27,7 +29,7 @@ function AboutStory() {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal className="about-story-visual" distance={45} delay={120}>
+        <ScrollReveal className="about-story-visual" distance={45} delay={140}>
           <div className="about-story-image">
             <img src="/ff.jpg" alt="Agricultural field" />
             <span>AGRIPEX / AGRICULTURAL FOCUS</span>
