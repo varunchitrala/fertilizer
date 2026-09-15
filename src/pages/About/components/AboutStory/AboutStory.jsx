@@ -9,7 +9,7 @@ function AboutStory() {
           <span>01</span>
           <p>Our story</p>
         </div>
-
+        
         <ScrollReveal className="about-story-main" distance={35}>
           <span className="about-kicker">Built around agriculture</span>
           <h2>
