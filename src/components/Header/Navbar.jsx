@@ -5,7 +5,7 @@ const navItems = [
   { label: "About", mr: "आमच्याबद्दल", href: "/about" },
   { label: "Products", mr: "उत्पादने", href: "/products" },
   { label: "Gallery", mr: "गॅलरी", href: "/gallery" },
-  { label: "Awards", mr: "पुरस्कार", href: "#" },
+  { label: "Awards", mr: "पुरस्कार", href: "/awards" },
   { label: "Contact", mr: "संपर्क", href: "/contact" },
 ];
 

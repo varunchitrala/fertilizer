@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import ScrollReveal from "../ScrollReveal";
 
 const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Products", href: "/products" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Awards", href: "#awards" },
-  { label: "Contact", href: "#contact" },
+  { label: "Awards", href: "/awards" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function Footer() {
@@ -49,11 +50,17 @@ function Footer() {
           <ScrollReveal className="footer-column" delay={180} distance="up">
             <span className="footer-column-title">Explore</span>
             <nav aria-label="Footer navigation">
-              {footerLinks.map((link) => (
-                <a href={link.href} key={link.label}>
-                  {link.label}
-                </a>
-              ))}
+              {footerLinks.map((link) =>
+                link.href.startsWith("/") ? (
+                  <Link to={link.href} key={link.label}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a href={link.href} key={link.label}>
+                    {link.label}
+                  </a>
+                )
+              )}
             </nav>
           </ScrollReveal>
 

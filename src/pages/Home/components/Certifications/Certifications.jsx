@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ScrollReveal from "../../../../components/ScrollReveal";
 import "./Certifications.css";
 
@@ -50,9 +51,11 @@ function Certifications() {
         </div>
 
         <ScrollReveal className="certifications-note" delay={280} distance="up">
-          <span>Official certification documents will be displayed here.</span>
+          <span>Official certification documents &amp; honors.</span>
           <span className="certifications-note-line" aria-hidden="true" />
-          <span>Verified information only</span>
+          <Link to="/awards" style={{ color: "var(--agri-forest)", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: "4px" }}>
+            Explore All Awards &amp; Recognitions →
+          </Link>
         </ScrollReveal>
       </div>
     </section>

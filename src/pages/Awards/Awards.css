@@ -1,0 +1,1270 @@
+
+.awards-page {
+  background-color: var(--agri-paper);
+  color: var(--agri-ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.awards-container {
+  width: min(var(--container), calc(100% - 80px));
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .awards-container {
+    width: min(var(--container), calc(100% - 36px));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION
+   -------------------------------------------------------------------------- */
+.awards-hero {
+  padding: 60px 0 50px;
+  border-bottom: 1px solid var(--agri-rule);
+  position: relative;
+}
+
+.awards-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(176, 139, 69, 0.08) 0%,
+    rgba(23, 59, 37, 0.02) 60%,
+    transparent 75%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.awards-hero-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--agri-rule);
+  margin-bottom: 40px;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--agri-muted);
+}
+
+.awards-section-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--agri-cream);
+  color: var(--agri-forest);
+  font-weight: 700;
+  border: 1px solid rgba(23, 59, 37, 0.12);
+}
+
+.awards-hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #edf3eb;
+  color: var(--agri-forest);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid rgba(113, 140, 104, 0.25);
+}
+
+.awards-hero-status i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2ea043;
+  box-shadow: 0 0 0 3px rgba(46, 160, 67, 0.2);
+}
+
+.awards-hero-main {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .awards-hero-main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.awards-overline {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--agri-gold);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.awards-overline::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--agri-gold);
+}
+
+.awards-hero-title h1 {
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--agri-forest);
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+}
+
+.awards-hero-title h1 em {
+  font-family: "DM Sans", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--agri-gold);
+}
+
+.awards-hero-intro {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--agri-muted);
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+
+.awards-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.awards-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--agri-forest);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--agri-forest);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.awards-primary-btn:hover {
+  background: var(--agri-forest-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(23, 59, 37, 0.18);
+}
+
+.awards-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--agri-forest);
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--agri-rule);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.awards-secondary-btn:hover {
+  background: var(--agri-cream);
+  border-color: var(--agri-forest);
+  transform: translateY(-2px);
+}
+
+/* Hero Visual Box */
+.awards-hero-visual {
+  position: relative;
+}
+
+.awards-hero-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(23, 59, 37, 0.12);
+  border: 1px solid var(--agri-rule);
+  background: #112e1c;
+}
+
+.awards-hero-frame img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.awards-hero-frame:hover img {
+  transform: scale(1.03);
+}
+
+.awards-hero-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(16, 45, 27, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(176, 139, 69, 0.4);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.awards-hero-badge span:first-child {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--agri-gold);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.awards-hero-badge strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.awards-hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(16, 45, 27, 0.92) 100%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   MILESTONES / STATS BANNER
+   -------------------------------------------------------------------------- */
+.awards-milestones-section {
+  padding: 40px 0;
+  background: #f7f8f2;
+  border-bottom: 1px solid var(--agri-rule);
+}
+
+.awards-milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .awards-milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-milestones-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.milestone-card {
+  background: #ffffff;
+  padding: 24px 20px;
+  border-radius: 14px;
+  border: 1px solid var(--agri-rule);
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.milestone-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--agri-gold), var(--agri-olive));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.milestone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(23, 59, 37, 0.08);
+  border-color: rgba(176, 139, 69, 0.4);
+}
+
+.milestone-card:hover::before {
+  opacity: 1;
+}
+
+.milestone-number {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--agri-forest);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.milestone-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--agri-ink);
+  margin-bottom: 4px;
+}
+
+.milestone-note {
+  font-size: 0.8rem;
+  color: var(--agri-muted);
+}
+
+/* --------------------------------------------------------------------------
+   SPOTLIGHT / FEATURED AWARD BANNER
+   -------------------------------------------------------------------------- */
+.awards-spotlight-section {
+  padding: 70px 0 60px;
+}
+
+.awards-spotlight-box {
+  background: radial-gradient(circle at top right, #1f4a30 0%, #112e1b 100%);
+  color: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(176, 139, 69, 0.35);
+  box-shadow: 0 24px 60px rgba(16, 45, 27, 0.24);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 990px) {
+  .awards-spotlight-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spotlight-content {
+  padding: 50px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .spotlight-content {
+    padding: 32px 24px;
+  }
+}
+
+.spotlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(176, 139, 69, 0.18);
+  border: 1px solid rgba(176, 139, 69, 0.45);
+  color: #e5c98d;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.spotlight-pill::before {
+  content: "★";
+  color: #ffdf79;
+}
+
+.spotlight-title {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.spotlight-agency {
+  display: block;
+  font-size: 0.95rem;
+  color: #b5ceb7;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.spotlight-quote {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 26px;
+  border-left: 3px solid var(--agri-gold);
+  padding-left: 18px;
+  font-style: italic;
+}
+
+.spotlight-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.spotlight-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #d6e2d5;
+}
+
+.spotlight-badge-item span {
+  color: #ffdf79;
+  font-weight: 700;
+}
+
+.spotlight-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #c7a153 0%, #a67c33 100%);
+  color: #112d1b;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.spotlight-cta-btn:hover {
+  background: linear-gradient(135deg, #d8b466 0%, #b88d44 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.spotlight-media {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.spotlight-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.spotlight-media-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #112e1b 0%,
+    rgba(17, 46, 27, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 990px) {
+  .spotlight-media-shade {
+    background: linear-gradient(180deg, transparent 0%, #112e1b 100%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TOOLBAR & FILTER SECTION
+   -------------------------------------------------------------------------- */
+.awards-toolbar-section {
+  padding: 30px 0 20px;
+  position: sticky;
+  top: 70px;
+  z-index: 20;
+  background: rgba(251, 252, 248, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--agri-rule);
+}
+
+.awards-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.awards-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.awards-filter-pills::-webkit-scrollbar {
+  height: 4px;
+}
+
+.awards-filter-pills::-webkit-scrollbar-thumb {
+  background: var(--agri-rule);
+  border-radius: 4px;
+}
+
+.filter-pill {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid var(--agri-rule);
+  background: #ffffff;
+  color: var(--agri-ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--agri-forest);
+  background: var(--agri-cream);
+}
+
+.filter-pill.is-active {
+  background: var(--agri-forest);
+  color: #ffffff;
+  border-color: var(--agri-forest);
+}
+
+.awards-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.awards-search-input {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--agri-rule);
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--agri-ink);
+  width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.awards-search-input:focus {
+  border-color: var(--agri-gold);
+  outline: none;
+}
+
+.awards-count-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--agri-muted);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   AWARDS GRID
+   -------------------------------------------------------------------------- */
+.awards-grid-section {
+  padding: 50px 0 70px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 680px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.award-card {
+  background: #ffffff;
+  border: 1px solid var(--agri-rule);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(23, 59, 37, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+  position: relative;
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(23, 59, 37, 0.1);
+  border-color: rgba(176, 139, 69, 0.45);
+}
+
+.award-card-header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #112d1b;
+}
+
+.award-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.award-card:hover .award-card-img {
+  transform: scale(1.05);
+}
+
+.award-card-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 45, 27, 0.2) 0%,
+    rgba(16, 45, 27, 0.85) 100%
+  );
+}
+
+.award-year-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #ffffff;
+  color: var(--agri-forest);
+  font-weight: 800;
+  font-size: 0.84rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.award-badge-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(16, 45, 27, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(176, 139, 69, 0.5);
+  color: #ffde8a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.award-category-strip {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  color: #e5f0e4;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.award-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.award-card-title {
+  font-size: 1.22rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--agri-forest);
+  margin-bottom: 8px;
+}
+
+.award-card-authority {
+  font-size: 0.84rem;
+  color: var(--agri-gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.award-card-authority::before {
+  content: "✦";
+  font-size: 0.7rem;
+}
+
+.award-card-summary {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--agri-muted);
+  margin-bottom: 18px;
+}
+
+.award-card-highlights {
+  list-style: none;
+  margin-bottom: 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.award-card-highlights li {
+  font-size: 0.82rem;
+  color: var(--agri-ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.award-card-highlights li::before {
+  content: "✓";
+  color: #2ea043;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.award-card-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--agri-rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.award-btn-inspect {
+  background: transparent;
+  border: 1px solid var(--agri-rule);
+  color: var(--agri-forest);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.award-btn-inspect:hover {
+  background: var(--agri-forest);
+  color: #ffffff;
+  border-color: var(--agri-forest);
+}
+
+/* Empty state */
+.awards-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px dashed var(--agri-rule);
+}
+
+.awards-empty h3 {
+  font-size: 1.3rem;
+  color: var(--agri-forest);
+  margin-bottom: 8px;
+}
+
+.awards-empty p {
+  color: var(--agri-muted);
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   ACCREDITATIONS & STANDARDS SECTION
+   -------------------------------------------------------------------------- */
+.awards-accreditations-section {
+  padding: 70px 0 80px;
+  background: #f2f5ed;
+  border-top: 1px solid var(--agri-rule);
+}
+
+.accreditations-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.accreditations-header .awards-overline {
+  justify-content: center;
+}
+
+.accreditations-header .awards-overline::before {
+  display: none;
+}
+
+.accreditations-header h2 {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  color: var(--agri-forest);
+  margin-bottom: 12px;
+}
+
+.accreditations-header h2 em {
+  font-family: "DM Sans", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--agri-gold);
+}
+
+.accreditations-header p {
+  font-size: 1.05rem;
+  color: var(--agri-muted);
+  line-height: 1.6;
+}
+
+.accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1020px) {
+  .accreditations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .accreditations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accreditation-card {
+  background: #ffffff;
+  border: 1px solid var(--agri-rule);
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.accreditation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(23, 59, 37, 0.08);
+  border-color: rgba(176, 139, 69, 0.4);
+}
+
+.accreditation-seal {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f4ecd6 0%, #e6d3a9 100%);
+  border: 2px solid var(--agri-gold);
+  color: #725619;
+  font-weight: 800;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 14px rgba(176, 139, 69, 0.2);
+}
+
+.accreditation-code {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--agri-forest);
+  margin-bottom: 6px;
+}
+
+.accreditation-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--agri-gold);
+  margin-bottom: 12px;
+}
+
+.accreditation-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--agri-muted);
+  margin-bottom: 14px;
+}
+
+.accreditation-issuer {
+  margin-top: auto;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--agri-ink);
+  background: var(--agri-cream);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   CTA BANNER
+   -------------------------------------------------------------------------- */
+.awards-cta-section {
+  padding: 60px 0;
+  background: var(--agri-paper);
+}
+
+.awards-cta-box {
+  background: var(--agri-forest);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 50px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-shadow: 0 20px 45px rgba(23, 59, 37, 0.16);
+}
+
+@media (max-width: 600px) {
+  .awards-cta-box {
+    padding: 36px 24px;
+  }
+}
+
+.awards-cta-content h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.awards-cta-content h2 em {
+  font-family: "DM Sans", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #ffdf79;
+}
+
+.awards-cta-content p {
+  color: #bdd4c0;
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+.awards-cta-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.awards-cta-btn-gold {
+  background: linear-gradient(135deg, #d3ad5c 0%, #b3883a 100%);
+  color: #102d1b;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.awards-cta-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.awards-cta-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.awards-cta-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE CITATION MODAL
+   -------------------------------------------------------------------------- */
+.citation-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 26, 16, 0.78);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeInModal 0.25s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.citation-modal-container {
+  background: #fbfbf7;
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--agri-gold);
+  position: relative;
+  padding: 36px 36px 40px;
+}
+
+@media (max-width: 580px) {
+  .citation-modal-container {
+    padding: 24px 20px 30px;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--agri-cream);
+  border: 1px solid var(--agri-rule);
+  color: var(--agri-forest);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.modal-close-btn:hover {
+  background: var(--agri-forest);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Certificate inner parchment styling */
+.certificate-paper {
+  border: 2px solid rgba(176, 139, 69, 0.6);
+  padding: 30px 26px;
+  border-radius: 12px;
+  background: #fdfdf9;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(176, 139, 69, 0.05);
+}
+
+.certificate-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(176, 139, 69, 0.35);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--agri-muted);
+}
+
+.certificate-seal-badge {
+  color: var(--agri-gold);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.certificate-title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  color: var(--agri-forest);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.certificate-conferred {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--agri-gold);
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.certificate-recipient {
+  text-align: center;
+  background: #f5f7ee;
+  border: 1px dashed rgba(113, 140, 104, 0.5);
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.certificate-recipient span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--agri-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.certificate-recipient strong {
+  font-size: 1.05rem;
+  color: var(--agri-forest);
+}
+
+.certificate-citation-block {
+  margin-bottom: 24px;
+}
+
+.certificate-citation-block h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--agri-forest);
+  margin-bottom: 8px;
+}
+
+.certificate-citation-block p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #33443a;
+  font-style: italic;
+  border-left: 3px solid var(--agri-gold);
+  padding-left: 14px;
+}
+
+.certificate-highlights-block {
+  margin-bottom: 26px;
+}
+
+.certificate-highlights-block h4 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--agri-forest);
+  margin-bottom: 10px;
+}
+
+.certificate-highlights-block ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.certificate-highlights-block li {
+  font-size: 0.88rem;
+  color: var(--agri-ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.certificate-highlights-block li::before {
+  content: "★";
+  color: var(--agri-gold);
+}
+
+.certificate-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid rgba(176, 139, 69, 0.35);
+  padding-top: 18px;
+  font-size: 0.82rem;
+}
+
+.certificate-verified {
+  color: #2ea043;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.certificate-date {
+  color: var(--agri-muted);
+}
