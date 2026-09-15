@@ -166,7 +166,7 @@ function Awards() {
                       Conferred by {spotlightAward.conferredBy}
                     </span>
                     <p className="spotlight-quote">
-                      &ldquo;{spotlightAward.citation}&rdquo;
+                      &ldquo;{spotlightAward.certification}&rdquo;
                     </p>
                     <div className="spotlight-meta-row">
                       <div className="spotlight-badge-item">
@@ -176,7 +176,7 @@ function Awards() {
                         <span>Venue:</span> {spotlightAward.venue}
                       </div>
                       <div className="spotlight-badge-item">
-                        <span>Status:</span> Gold Trophy & Citation
+                        <span>Status:</span> Gold Trophy & certification
                       </div>
                     </div>
                     <button
@@ -184,7 +184,7 @@ function Awards() {
                       className="spotlight-cta-btn"
                       onClick={() => setSelectedAward(spotlightAward)}
                     >
-                      <span>Inspect Official Citation</span>
+                      <span>Inspect Official certification</span>
                       <span aria-hidden="true">↗</span>
                     </button>
                   </div>
@@ -306,7 +306,7 @@ function Awards() {
                             className="award-btn-inspect"
                             onClick={() => setSelectedAward(award)}
                           >
-                            <span>View Citation &amp; Certificate</span>
+                            <span>View certification &amp; Certificate</span>
                             <span aria-hidden="true">→</span>
                           </button>
                         </div>
@@ -388,10 +388,10 @@ function Awards() {
           </div>
         </section>
 
-        {/* ================= CITATION & CERTIFICATE MODAL ================= */}
+        {/* ================= certification & CERTIFICATE MODAL ================= */}
         {selectedAward && (
           <div
-            className="citation-modal-backdrop"
+            className="certification-modal-backdrop"
             onClick={(e) => {
               if (e.target === e.currentTarget) setSelectedAward(null);
             }}
@@ -399,7 +399,7 @@ function Awards() {
             aria-modal="true"
             aria-labelledby="modal-award-title"
           >
-            <div className="citation-modal-container">
+            <div className="certification-modal-container">
               <button
                 type="button"
                 className="modal-close-btn"
@@ -433,9 +433,9 @@ function Awards() {
                   </strong>
                 </div>
 
-                <div className="certificate-citation-block">
-                  <h4>Official Citation Statement</h4>
-                  <p>&ldquo;{selectedAward.citation}&rdquo;</p>
+                <div className="certificate-certification-block">
+                  <h4>Official certification Statement</h4>
+                  <p>&ldquo;{selectedAward.certification}&rdquo;</p>
                 </div>
 
                 <div className="certificate-highlights-block">
