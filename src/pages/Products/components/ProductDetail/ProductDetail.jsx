@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../../../../components/Header/Header";
 import Footer from "../../../../components/Footer/Footer";
@@ -16,6 +17,11 @@ const products = {
 
 function ProductDetail(){
  const {productId}=useParams(); const product=products[productId];
+ useEffect(() => {
+   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+   document.documentElement.scrollTop = 0;
+   document.body.scrollTop = 0;
+ }, [productId]);
  if(!product) return <><Header/><main className="product-detail-page product-not-found"><div className="container"><span>PRODUCT NOT FOUND</span><h1>This product page is not available yet.</h1><Link to="/products">← Back to products</Link></div></main><Footer/></>;
  return <><Header/><main className="product-detail-page"><div className="container">
   <Link className="product-back" to="/products">← Back to products</Link>

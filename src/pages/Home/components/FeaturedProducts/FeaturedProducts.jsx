@@ -30,6 +30,12 @@ const products = [
 ];
 
 function FeaturedProducts() {
+  const handleNavigateToProducts = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   return (
     <section className="featured-products" aria-labelledby="featured-products-title">
       <div className="header-container featured-products-container">
@@ -47,7 +53,11 @@ function FeaturedProducts() {
               Discover a selection from the AGRIPEX range, presented with clear
               product information and a direct path to the full catalogue.
             </p>
-            <Link className="featured-products-catalog-link" to="/products">
+            <Link
+              className="featured-products-catalog-link"
+              to="/products"
+              onClick={handleNavigateToProducts}
+            >
               <span>View all products</span>
               <b aria-hidden="true">↗</b>
             </Link>
@@ -66,6 +76,7 @@ function FeaturedProducts() {
                 to="/products"
                 className="featured-product-image-link"
                 aria-label={`View ${product.name} details`}
+                onClick={handleNavigateToProducts}
               >
                 <div className="featured-product-image">
                   <img
@@ -84,7 +95,11 @@ function FeaturedProducts() {
                 </div>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
-                <Link className="featured-product-card-cta" to="/products">
+                <Link
+                  className="featured-product-card-cta"
+                  to="/products"
+                  onClick={handleNavigateToProducts}
+                >
                   <span>View product</span>
                   <b aria-hidden="true">↗</b>
                 </Link>
