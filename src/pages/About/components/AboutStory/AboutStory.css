@@ -4,28 +4,50 @@
   border-bottom: 1px solid #d8e0d7;
 }
 
-.about-story-row {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr) minmax(360px, 0.78fr);
-  gap: 54px;
-  align-items: center;
+.about-story-column {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.about-story-heading {
+  max-width: 980px;
 }
 
 .about-section-label {
-  align-self: start;
-  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
 }
 
-.about-story-content {
-  min-width: 0;
+.about-section-label span {
+  color: #b08b45;
+  font: 700 10px/1 "DM Sans", Inter, sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.about-section-label p {
+  color: #718078;
+  font: 700 10px/1 "DM Sans", Inter, sans-serif;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.about-kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: #748178;
+  font: 700 11px/1.4 "DM Sans", Inter, sans-serif;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
 }
 
 .about-story h2 {
-  max-width: 840px;
-  margin: 12px 0 26px;
+  max-width: 980px;
+  margin: 0;
   color: #183b27;
-  font: 800 clamp(40px, 4.7vw, 68px)/0.99 "Manrope", Inter, sans-serif;
-  letter-spacing: -0.065em;
+  font: 800 clamp(46px, 6vw, 84px)/0.98 "Manrope", Inter, sans-serif;
+  letter-spacing: -0.07em;
 }
 
 .about-story h2 em {
@@ -33,23 +55,28 @@
   font-style: normal;
 }
 
-.about-story-main p,
+.about-story-content {
+  max-width: 900px;
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid #d8e0d7;
+}
+
 .about-story-content p {
-  max-width: 760px;
+  max-width: 850px;
   margin: 0 0 16px;
   color: #596860;
-  font: 15px/1.75 "DM Sans", Inter, sans-serif;
+  font: 16px/1.75 "DM Sans", Inter, sans-serif;
 }
 
 .about-story-content .about-story-lead {
   color: #304b39;
-  font-size: 18px;
-  line-height: 1.65;
-  margin-bottom: 18px;
+  font-size: 19px;
+  line-height: 1.7;
 }
 
 .about-story-visual {
-  min-width: 0;
+  margin-top: 34px;
 }
 
 .about-story-image {
@@ -68,32 +95,32 @@
 }
 
 .about-story-visual:hover .about-story-image img {
-  transform: scale(1.035);
+  transform: scale(1.025);
 }
 
 .about-story-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 37, 20, 0.02) 48%, rgba(10, 37, 20, 0.48));
+  background: linear-gradient(180deg, rgba(10, 37, 20, 0.01) 45%, rgba(10, 37, 20, 0.48));
   pointer-events: none;
 }
 
 .about-story-image span {
   position: absolute;
   z-index: 1;
-  left: 17px;
-  bottom: 15px;
+  left: 18px;
+  bottom: 16px;
   color: rgba(255, 255, 255, 0.9);
-  font: 700 9px "DM Sans", Inter, sans-serif;
+  font: 700 9px/1 "DM Sans", Inter, sans-serif;
   letter-spacing: 0.14em;
 }
 
 .about-story-detail {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 18px;
-  padding-top: 17px;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding-top: 18px;
   margin-top: 16px;
   border-top: 1px solid #d8e0d7;
 }
@@ -106,28 +133,12 @@
 
 .about-story-detail strong {
   color: #183b27;
-  font: 600 14px/1.5 "DM Sans", Inter, sans-serif;
-}
-
-@media (max-width: 1150px) {
-  .about-story-row {
-    grid-template-columns: 80px minmax(0, 1fr) minmax(300px, 0.7fr);
-    gap: 34px;
-  }
-
-  .about-story h2 {
-    font-size: clamp(38px, 4.5vw, 58px);
-  }
+  font: 600 15px/1.55 "DM Sans", Inter, sans-serif;
 }
 
 @media (max-width: 900px) {
-  .about-story-row {
-    grid-template-columns: 70px 1fr;
-    align-items: start;
-  }
-
-  .about-story-visual {
-    grid-column: 2;
+  .about-story-column {
+    max-width: 760px;
   }
 }
 
@@ -136,21 +147,17 @@
     padding: 80px 0 90px;
   }
 
-  .about-story-row {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
   .about-section-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 0;
+    margin-bottom: 26px;
   }
 
   .about-story h2 {
-    margin-top: 8px;
     font-size: clamp(40px, 11vw, 58px);
+  }
+
+  .about-story-content {
+    margin-top: 28px;
+    padding-top: 24px;
   }
 
   .about-story-content .about-story-lead {
@@ -158,7 +165,7 @@
   }
 
   .about-story-visual {
-    grid-column: auto;
+    margin-top: 28px;
   }
 
   .about-story-image img {
