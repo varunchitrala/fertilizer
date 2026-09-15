@@ -9,7 +9,7 @@ const navItems = [
   { label: "Contact", mr: "संपर्क", href: "/contact" },
 ];
 
-function Navbar({ mobileOpen, setMobileOpen }) {
+function Navbar({ language, mobileOpen, setMobileOpen }) {
   const location = useLocation();
   const getLabel = (item) => item.label;
 

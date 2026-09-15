@@ -18,9 +18,8 @@ function WhyChoose() {
           <div className="why-choose-heading-wrap">
             <div>
               <span className="why-choose-eyebrow">A practical approach to agriculture</span>
-              <h2 id="why-choose-title">A better understanding<br /><em>of agriculture.</em></h2>
+              <h2 id="why-choose-title">A better understanding <em>of agriculture.</em></h2>
             </div>
-            <p>We keep the focus on relevance, clear product information and the practical needs behind an agricultural requirement.</p>
           </div>
         </ScrollReveal>
 

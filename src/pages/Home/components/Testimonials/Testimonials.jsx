@@ -11,14 +11,14 @@ const stories = [
     place: "Maharashtra",
   },
   {
-    image: "/farmer-2.jpg",
+    image: "/agriculture.jpg",
     quote:
       "A healthy crop is built throughout the season. Good inputs matter, but consistency and the right decision at each stage matter just as much.",
     tag: "CROP JOURNEY",
     place: "Western India",
   },
   {
-    image: "/main.jpg",
+    image: "/woman.jpg",
     quote:
       "When agricultural products are backed by dependable service, every season starts with a little more confidence.",
     tag: "FARMER FIRST",
@@ -51,13 +51,9 @@ function Testimonials() {
           </div>
           <h2>
             Built around
-            <br />
-            <em>real farming.</em>
+            <em> real farming.</em>
           </h2>
-          <p>
-            Every season brings different soil, weather and crop challenges. Our
-            approach starts by understanding what happens in the field.
-          </p>
+          
         </ScrollReveal>
 
         <ScrollReveal className="story-stage" delay={150} distance="up">
@@ -107,13 +103,6 @@ function Testimonials() {
           <div className="story-hint">Auto rotating</div>
         </ScrollReveal>
 
-        <ScrollReveal className="testimonials-note" delay={350} distance="up">
-          <span>ABOUT THESE STORIES</span>
-          <p>
-            Representative perspectives are used here until verified customer
-            testimonials are available.
-          </p>
-        </ScrollReveal>
       </div>
     </section>
   );

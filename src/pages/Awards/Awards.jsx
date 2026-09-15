@@ -6,7 +6,6 @@ import AwardMilestones from "./components/AwardMilestones/AwardMilestones";
 import AwardSpotlight from "./components/AwardSpotlight/AwardSpotlight";
 import AwardsToolbar from "./components/AwardsToolbar/AwardsToolbar";
 import AwardsGrid from "./components/AwardsGrid/AwardsGrid";
-import Accreditations from "./components/Accreditations/Accreditations";
 import AwardsCta from "./components/AwardsCta/AwardsCta";
 import AwardCertificateModal from "./components/AwardCertificateModal/AwardCertificateModal";
 import {
@@ -80,7 +79,7 @@ function Awards() {
           onInspect={setSelectedAward}
           onReset={resetFilters}
         />
-        <Accreditations items={accreditationsData} />
+      
         <AwardsCta />
         <AwardCertificateModal
           award={selectedAward}

@@ -18,13 +18,13 @@
 }
 .footer-orbit-one {
   width: 340px;
-  height: 100px;
+  height: 50px;
   top: -250px;
   right: -95px;
 }
 .footer-orbit-two {
   width: 180px;
-  height: 100px;
+  height: 70px;
   bottom: -10px;
   left: -135px;
   border-color: rgba(255, 255, 255, 0.045);
@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
 }
 .footer-eyebrow {

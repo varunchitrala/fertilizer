@@ -25,8 +25,8 @@ function Footer() {
             </span>
             <h2>
               Let&apos;s grow
-              <br />
-              <em>what matters.</em>
+              
+              <em> what matters.</em>
             </h2>
           </div>
           <a

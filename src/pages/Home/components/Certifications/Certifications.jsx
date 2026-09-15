@@ -21,8 +21,7 @@ function Certifications() {
             </div>
             <h2 id="certifications-title">
               Quality you can
-              <br />
-              <em>verify.</em>
+              <em> verify.</em>
             </h2>
           </div>
           <p>

@@ -44,22 +44,19 @@ function FeaturedProducts() {
             <span className="featured-products-kicker">Our products</span>
             <h2 id="featured-products-title">
               Explore our
-              <br />
-              <em>product range.</em>
+            
+              <em> product range.</em>
             </h2>
           </div>
           <div className="featured-products-heading-side">
-            <p>
-              Discover a selection from the AGRIPEX range, presented with clear
-              product information and a direct path to the full catalogue.
-            </p>
+            
             <Link
               className="featured-products-catalog-link"
               to="/products"
               onClick={handleNavigateToProducts}
             >
-              <span>View all products</span>
-              <b aria-hidden="true">↗</b>
+              
+            
             </Link>
           </div>
         </ScrollReveal>

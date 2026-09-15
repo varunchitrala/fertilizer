@@ -63,6 +63,7 @@
 }
 .testimonials-intro h2 {
   margin: 0;
+  white-space: nowrap;
   font-family: Manrope, Inter, sans-serif;
   font-size: clamp(50px, 6.2vw, 86px);
   font-weight: 800;
@@ -315,6 +316,7 @@
   }
   .testimonials-intro h2 {
     font-size: clamp(45px, 14vw, 68px);
+    white-space: normal;
   }
   .story-stage {
     margin-top: 24px;
