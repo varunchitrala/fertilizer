@@ -8,8 +8,7 @@ function AboutPreview() {
       <div className="header-container about-preview-container">
         <div className="about-preview-layout">
           <ScrollReveal className="about-preview-label" distance="up">
-            <span>01</span>
-            <p>Our story</p>
+            
           </ScrollReveal>
 
           <div className="about-preview-grid">

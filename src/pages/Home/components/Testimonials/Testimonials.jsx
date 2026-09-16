@@ -43,20 +43,15 @@ function Testimonials() {
     <section className="testimonials" id="testimonials">
       <div className="header-container testimonials-container">
         <ScrollReveal className="testimonials-intro" distance="left">
-          <div>
-            <span className="testimonials-eyebrow">
-              <i /> Voices from the field
-            </span>
-            <span className="testimonials-number">04 / 05</span>
-          </div>
+          <span className="testimonials-eyebrow">
+            <i /> Voices from the field
+          </span>
           <h2>
-            Built around
-            <em> real farming.</em>
+            Built around <em>real farming.</em>
           </h2>
-          
         </ScrollReveal>
 
-        <ScrollReveal className="story-stage" delay={150} distance="up">
+        <ScrollReveal className="story-stage" delay={150} distance="up" >
           <div className="story-image-wrap">
             {stories.map((story, index) => (
               <div
@@ -102,7 +97,6 @@ function Testimonials() {
           </div>
           <div className="story-hint">Auto rotating</div>
         </ScrollReveal>
-
       </div>
     </section>
   );
