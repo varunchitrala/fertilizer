@@ -459,3 +459,49 @@
     display: none;
   }
 }
+
+html.language-marathi .brand-header-inner {
+  min-height: 0;
+  padding-block: 18px;
+}
+
+html.language-marathi .brand-logo {
+  height: auto;
+}
+
+html.language-marathi .brand-copy h1,
+html.language-marathi .brand-copy p {
+  overflow-wrap: anywhere;
+}
+
+html.language-marathi .navigation-inner {
+  min-height: 0;
+  padding-block: 8px;
+}
+
+html.language-marathi .nav-links {
+  flex-wrap: wrap;
+  row-gap: 2px;
+}
+
+html.language-marathi .nav-link,
+html.language-marathi .products-trigger {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 820px) {
+  html.language-marathi .brand-header-inner {
+    min-height: 0;
+    padding-block: 12px;
+  }
+
+  html.language-marathi .brand-copy h1 {
+    line-height: 1.35;
+  }
+
+  html.language-marathi .mobile-navigation a,
+  html.language-marathi .mobile-navigation button {
+    white-space: normal;
+  }
+}

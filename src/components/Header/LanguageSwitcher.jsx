@@ -47,9 +47,18 @@ function LanguageSwitcher({ language, setLanguage }) {
 
   // On mount, if we're already set to Marathi (e.g. after navigation), re-trigger
   useEffect(() => {
+    document.documentElement.classList.toggle(
+      "language-marathi",
+      language === "mr",
+    );
+
     if (language === "mr") {
       triggerGoogleTranslate("mr");
     }
+
+    return () => {
+      document.documentElement.classList.remove("language-marathi");
+    };
   }, [language]);
 
   return (

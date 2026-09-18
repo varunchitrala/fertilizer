@@ -80,3 +80,51 @@ body {
   display: none !important;
 }
 
+/* Marathi needs a Devanagari font and more generous metrics than the Latin layout. */
+html.language-marathi body {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", sans-serif;
+  line-height: 1.5;
+}
+
+html.language-marathi body,
+html.language-marathi body * {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", sans-serif !important;
+}
+
+html.language-marathi body h1,
+html.language-marathi body h2,
+html.language-marathi body h3,
+html.language-marathi body h4,
+html.language-marathi body h5,
+html.language-marathi body h6,
+html.language-marathi body p,
+html.language-marathi body span,
+html.language-marathi body a,
+html.language-marathi body button,
+html.language-marathi body label {
+  letter-spacing: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+html.language-marathi h1,
+html.language-marathi h2,
+html.language-marathi h3,
+html.language-marathi h4,
+html.language-marathi h5,
+html.language-marathi h6 {
+  line-height: 1.35 !important;
+}
+
+html.language-marathi button,
+html.language-marathi a,
+html.language-marathi input,
+html.language-marathi textarea,
+html.language-marathi select {
+  line-height: 1.55 !important;
+  white-space: normal;
+}
+
+html.language-marathi body [style*="white-space"] {
+  white-space: normal !important;
+}

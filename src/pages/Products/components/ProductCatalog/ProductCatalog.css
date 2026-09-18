@@ -209,6 +209,13 @@
     12px/1.55 "DM Sans",
     sans-serif;
 }
+.product-card-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: auto;
+}
+
 .product-card-cta {
   display: flex;
   align-items: center;
@@ -216,7 +223,6 @@
   gap: 12px;
   width: 100%;
   min-height: 43px;
-  margin-top: auto;
   padding: 0 13px 0 14px;
   border: 1px solid #173b25;
   border-radius: 5px;
@@ -250,6 +256,7 @@
   outline: 2px solid #b08b45;
   outline-offset: 4px;
 }
+
 @media (max-width: 1180px) {
   .products-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
