@@ -54,6 +54,21 @@
     sans-serif;
 }
 
+html.language-marathi .certifications-heading {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+html.language-marathi .certifications-heading h2 {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+html.language-marathi .certifications-heading > p {
+  margin: 0;
+}
+
 .certifications-carousel {
   position: relative;
   width: 100vw;
@@ -223,6 +238,14 @@
   .certifications-heading {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  html.language-marathi .certifications-heading h2 {
+    max-width: 100%;
+    font-size: clamp(24px, 7vw, 42px);
+    line-height: 1.15;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .certifications-carousel {

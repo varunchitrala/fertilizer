@@ -95,11 +95,12 @@
 .about-hero-modern-copy p {
   max-width: 570px;
   margin: 32px 0 34px;
-  color: #627168;
+  color:black;
   font:
     16px/1.8 "DM Sans",
     Inter,
     sans-serif;
+    font-weight: 400;
 }
 
 .about-hero-modern-link {

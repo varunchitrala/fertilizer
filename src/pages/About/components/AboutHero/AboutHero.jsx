@@ -45,11 +45,7 @@ function AboutHero() {
         </ScrollReveal>
       </div>
 
-      <div className="about-hero-modern-footer container">
-        <span>Built around the needs of agriculture</span>
-        <span>Nashik, Maharashtra</span>
-        <span>2026</span>
-      </div>
+      
     </section>
   );
 }

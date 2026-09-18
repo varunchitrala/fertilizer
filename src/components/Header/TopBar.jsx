@@ -8,7 +8,11 @@ function TopBar() {
             agripexpestiside1995@gmail.com
           </a>
         </div>
-        <div className="top-social" aria-label="Social media links">
+        <div
+          className="top-social"
+          aria-label="Social media links"
+          translate="no"
+        >
           <a href="#" aria-label="Facebook">
             f
           </a>

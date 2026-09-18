@@ -12,6 +12,10 @@ function clearGoogleTranslateCookies() {
   }
 }
 
+function setGoogleTranslateCookie(languageCode) {
+  document.cookie = `googtrans=/en/${languageCode}; path=/`;
+}
+
 function triggerGoogleTranslate(langCode) {
   const maxAttempts = 20;
   let attempts = 0;
@@ -34,14 +38,14 @@ function triggerGoogleTranslate(langCode) {
 
 function LanguageSwitcher({ language, setLanguage }) {
   const handleMarathi = useCallback(() => {
+    setGoogleTranslateCookie("mr");
     setLanguage("mr");
-    triggerGoogleTranslate("mr");
+    window.location.reload();
   }, [setLanguage]);
 
   const handleEnglish = useCallback(() => {
     setLanguage("en");
     clearGoogleTranslateCookies();
-    // Reload to fully restore original English content
     window.location.reload();
   }, [setLanguage]);
 

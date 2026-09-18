@@ -145,7 +145,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="footer-socials" aria-label="Social media links">
+            <div className="footer-socials" aria-label="Social media links" translate="no">
               <a href="#" aria-label="Facebook">
                 f
               </a>
@@ -200,7 +200,7 @@ function Footer() {
           </ScrollReveal>
         </div>
 
-        <div className="footer-wordmark" aria-hidden="true">
+        <div className="footer-wordmark notranslate" translate="no" aria-hidden="true">
           AGRIPEX
         </div>
 

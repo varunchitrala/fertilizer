@@ -11,7 +11,7 @@ const navItems = [
 
 function Navbar({ language, mobileOpen, setMobileOpen }) {
   const location = useLocation();
-  const getLabel = (item) => item.label;
+  const getLabel = (item) => (language === "mr" ? item.mr : item.label);
 
   return (
     <div className="navigation-bar">
@@ -28,10 +28,15 @@ function Navbar({ language, mobileOpen, setMobileOpen }) {
                 {getLabel(item)}
               </Link>
             ) : (
-              <a className="nav-link" href={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
+              <a
+                className="nav-link"
+                href={item.href}
+                key={item.label}
+                onClick={() => setMobileOpen(false)}
+              >
                 {getLabel(item)}
               </a>
-            )
+            ),
           )}
         </nav>
 
@@ -51,14 +56,22 @@ function Navbar({ language, mobileOpen, setMobileOpen }) {
           <nav className="mobile-navigation" aria-label="Mobile navigation">
             {navItems.map((item) =>
               item.href.startsWith("/") ? (
-                <Link to={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
+                <Link
+                  to={item.href}
+                  key={item.label}
+                  onClick={() => setMobileOpen(false)}
+                >
                   {getLabel(item)}
                 </Link>
               ) : (
-                <a href={item.href} key={item.label} onClick={() => setMobileOpen(false)}>
+                <a
+                  href={item.href}
+                  key={item.label}
+                  onClick={() => setMobileOpen(false)}
+                >
                   {getLabel(item)}
                 </a>
-              )
+              ),
             )}
           </nav>
         )}
