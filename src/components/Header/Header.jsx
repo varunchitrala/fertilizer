@@ -5,7 +5,9 @@ import Navbar from "./Navbar";
 import "./Header.css";
 
 function Header() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(() =>
+    document.cookie.includes("googtrans=/en/mr") ? "mr" : "en",
+  );
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 

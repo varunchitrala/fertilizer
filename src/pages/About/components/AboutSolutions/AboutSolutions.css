@@ -19,7 +19,10 @@
   max-width: 650px;
   margin: 14px 0 28px;
   color: #183b27;
-  font: 800 clamp(42px, 5vw, 70px)/0.98 "Manrope", Inter, sans-serif;
+  font:
+    800 clamp(42px, 5vw, 70px)/0.98 "Manrope",
+    Inter,
+    sans-serif;
   letter-spacing: -0.065em;
 }
 
@@ -32,7 +35,10 @@
   max-width: 580px;
   margin: 0 0 38px;
   color: #596860;
-  font: 16px/1.8 "DM Sans", Inter, sans-serif;
+  font:
+    16px/1.8 "DM Sans",
+    Inter,
+    sans-serif;
 }
 
 .about-solution-list {
@@ -50,13 +56,19 @@
 
 .about-solution-list span {
   color: #b18a3d;
-  font: 700 10px "DM Sans", Inter, sans-serif;
+  font:
+    700 10px "DM Sans",
+    Inter,
+    sans-serif;
   letter-spacing: 0.1em;
 }
 
 .about-solution-list strong {
   color: #25352b;
-  font: 700 15px "Manrope", Inter, sans-serif;
+  font:
+    700 15px "Manrope",
+    Inter,
+    sans-serif;
 }
 
 .about-solutions-image {
@@ -118,4 +130,16 @@
   .about-solutions-image img {
     height: 400px;
   }
+}
+
+html.language-marathi .about-solutions h2 {
+  line-height: 1.3;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+
+html.language-marathi .about-solutions-copy p,
+html.language-marathi .about-solution-list strong {
+  line-height: 1.8;
+  overflow-wrap: anywhere;
 }

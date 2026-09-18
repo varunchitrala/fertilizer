@@ -3,10 +3,30 @@ import ScrollReveal from "../../../../components/ScrollReveal";
 import "./Certifications.css";
 
 const certifications = [
-  { number: "01", title: "Certification", label: "Quality standard" },
-  { number: "02", title: "Certification", label: "Quality standard" },
-  { number: "03", title: "Certification", label: "Quality standard" },
-  { number: "04", title: "Certification", label: "Quality standard" },
+  {
+    number: "01",
+    title: "National Honor Certificate",
+    label: "Agricultural excellence",
+    image: "/award-certificate.jpg",
+  },
+  {
+    number: "02",
+    title: "Agriculture Excellence Award",
+    label: "Award recognition",
+    image: "/award-trophy.jpg",
+  },
+  {
+    number: "03",
+    title: "Industry Award Ceremony",
+    label: "Professional recognition",
+    image: "/award-ceremony.jpg",
+  },
+  {
+    number: "04",
+    title: "Quality Standard Certificate",
+    label: "Verified quality",
+    image: "/award-certificate.jpg",
+  },
 ];
 
 function Certifications() {
@@ -30,29 +50,51 @@ function Certifications() {
           </p>
         </ScrollReveal>
 
-        <div className="certifications-carousel" aria-label="Certifications carousel">
+        <div
+          className="certifications-carousel"
+          aria-label="Certifications carousel"
+        >
           <div className="certifications-track">
-            {[...certifications, ...certifications].map((certification, index) => (
-              <article className="certification-item" key={`${certification.number}-${index}`}>
-                <div className="certification-paper">
-                  <span className="certification-paper-number">{certification.number}</span>
-                  <span className="certification-seal" aria-hidden="true">CERT</span>
-                  <strong>{certification.title}</strong>
-                  <small>{certification.label}</small>
-                </div>
-                <div className="certification-meta">
-                  <span>{certification.number}</span>
-                  <strong>{certification.title}</strong>
-                </div>
-              </article>
-            ))}
+            {[...certifications, ...certifications].map(
+              (certification, index) => (
+                <article
+                  className="certification-item"
+                  key={`${certification.number}-${index}`}
+                >
+                  <div className="certification-paper">
+                    <span className="certification-paper-number">
+                      {certification.number}
+                    </span>
+                    <img
+                      className="certification-image"
+                      src={certification.image}
+                      alt={certification.title}
+                    />
+                    <strong>{certification.title}</strong>
+                    <small>{certification.label}</small>
+                  </div>
+                  <div className="certification-meta">
+                    <span>{certification.number}</span>
+                    <strong>{certification.title}</strong>
+                  </div>
+                </article>
+              ),
+            )}
           </div>
         </div>
 
         <ScrollReveal className="certifications-note" delay={280} distance="up">
           <span>Official certification documents &amp; honors.</span>
           <span className="certifications-note-line" aria-hidden="true" />
-          <Link to="/awards" style={{ color: "var(--agri-forest)", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: "4px" }}>
+          <Link
+            to="/awards"
+            style={{
+              color: "var(--agri-forest)",
+              fontWeight: 700,
+              textDecoration: "underline",
+              textUnderlineOffset: "4px",
+            }}
+          >
             Explore All Awards &amp; Recognitions →
           </Link>
         </ScrollReveal>
